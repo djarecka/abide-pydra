@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH -J abide_download
-#SBATCH -t 1-00:00:00
+#SBATCH -t 4:00:00
 #SBATCH --mem=64GB
 #SBATCH --cpus-per-task=4
 #SBATCH --partition=gablab
