@@ -27,8 +27,8 @@ fmriprep $DATADIR $OUTDIR participant --participant_label $subject --nthreads 8 
 BASE = "/scratch/Thu/nlo"
 DATADIR = "/BASE/abide/Caltech"
 OUTDIR = "/BASE/abide-processed/Caltech"
-CACHEDIR = "/scratch/Thu/nlo/cache_dir"
-WORKDIR = "/BASE/cache_dir"
+CACHEDIR = "/scratch/Thu/nlo/pydra_cache_dir"
+WORKDIR = "/BASE/fmriprep_work_dir"
 
 FS_LICENSE = "/home/nlo/.freesurfer_license.txt"
 IMAGE = "/om4/group/gablab/data/singularity-images/fmriprep-v1.3.0p2.sif"
