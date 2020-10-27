@@ -1,0 +1,365 @@
+[33mWARNING:[0m seccomp requested but not enabled, seccomp library is missing or too old
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData to /home/nlo/scripts/abide-pydra/download/RawData 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/.git to /home/nlo/scripts/abide-pydra/download/RawData 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Start receiving objects 
+[INFO] Start resolving deltas 
+[INFO] Start check out things 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData) 
+[INFO] Installing Dataset(/home/nlo/scripts/abide-pydra/download/RawData) to get /home/nlo/scripts/abide-pydra/download/RawData recursively 
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/BNI_1/.git to /home/nlo/scripts/abide-pydra/download/RawData/BNI_1 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Start receiving objects 
+[INFO] Start resolving deltas 
+[INFO] Start check out things 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1) 
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData/EMC_1) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/EMC_1/.git to /home/nlo/scripts/abide-pydra/download/RawData/EMC_1 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Start receiving objects 
+[INFO] Start resolving deltas 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData/EMC_1) 
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData/ETHZ_1) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/ETHZ_1/.git to /home/nlo/scripts/abide-pydra/download/RawData/ETHZ_1 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Start receiving objects 
+[INFO] Start resolving deltas 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData/ETHZ_1) 
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData/ETH_1) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/ETH_1/.git to /home/nlo/scripts/abide-pydra/download/RawData/ETH_1 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData/ETH_1) 
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData/GU_1) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/GU_1/.git to /home/nlo/scripts/abide-pydra/download/RawData/GU_1 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Start receiving objects 
+[INFO] Start resolving deltas 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData/GU_1) 
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData/IP_1) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/IP_1/.git to /home/nlo/scripts/abide-pydra/download/RawData/IP_1 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Start receiving objects 
+[INFO] Start resolving deltas 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData/IP_1) 
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData/IU_1) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/IU_1/.git to /home/nlo/scripts/abide-pydra/download/RawData/IU_1 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Start receiving objects 
+[INFO] Start resolving deltas 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData/IU_1) 
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData/KKI_1) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/KKI_1/.git to /home/nlo/scripts/abide-pydra/download/RawData/KKI_1 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Start receiving objects 
+[INFO] Start resolving deltas 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData/KKI_1) 
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData/KUL_1) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/KUL_1/.git to /home/nlo/scripts/abide-pydra/download/RawData/KUL_1 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData/KUL_1) 
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData/KUL_3) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/KUL_3/.git to /home/nlo/scripts/abide-pydra/download/RawData/KUL_3 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Start receiving objects 
+[INFO] Start resolving deltas 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData/KUL_3) 
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData/NYU_1) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/NYU_1/.git to /home/nlo/scripts/abide-pydra/download/RawData/NYU_1 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Start receiving objects 
+[INFO] Start resolving deltas 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData/NYU_1) 
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData/NYU_2) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/NYU_2/.git to /home/nlo/scripts/abide-pydra/download/RawData/NYU_2 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Start receiving objects 
+[INFO] Start resolving deltas 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData/NYU_2) 
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData/OHSU_1) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/OHSU_1/.git to /home/nlo/scripts/abide-pydra/download/RawData/OHSU_1 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Start receiving objects 
+[INFO] Start resolving deltas 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData/OHSU_1) 
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData/OLIN_1) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/OLIN_1/.git to /home/nlo/scripts/abide-pydra/download/RawData/OLIN_1 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData/OLIN_1) 
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData/ONRC_2) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/ONRC_2/.git to /home/nlo/scripts/abide-pydra/download/RawData/ONRC_2 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Start receiving objects 
+[INFO] Start resolving deltas 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData/ONRC_2) 
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData/SDSU_1) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/SDSU_1/.git to /home/nlo/scripts/abide-pydra/download/RawData/SDSU_1 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Start receiving objects 
+[INFO] Start resolving deltas 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData/SDSU_1) 
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData/TCD_1) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/TCD_1/.git to /home/nlo/scripts/abide-pydra/download/RawData/TCD_1 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Start receiving objects 
+[INFO] Start resolving deltas 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData/TCD_1) 
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData/UCD_1) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/UCD_1/.git to /home/nlo/scripts/abide-pydra/download/RawData/UCD_1 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Start receiving objects 
+[INFO] Start resolving deltas 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData/UCD_1) 
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData/UCLA_1) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/UCLA_1/.git to /home/nlo/scripts/abide-pydra/download/RawData/UCLA_1 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Start receiving objects 
+[INFO] Start resolving deltas 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData/UCLA_1) 
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData/UCLA_Long) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/UCLA_Long/.git to /home/nlo/scripts/abide-pydra/download/RawData/UCLA_Long 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Start receiving objects 
+[INFO] Start resolving deltas 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData/UCLA_Long) 
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData/UPSM_Long) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/UPSM_Long/.git to /home/nlo/scripts/abide-pydra/download/RawData/UPSM_Long 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Start receiving objects 
+[INFO] Start resolving deltas 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData/UPSM_Long) 
+[INFO] Cloning dataset to Dataset(/home/nlo/scripts/abide-pydra/download/RawData/USM_1) 
+[INFO] Attempting to clone from http://datasets.datalad.org/abide2/RawData/USM_1/.git to /home/nlo/scripts/abide-pydra/download/RawData/USM_1 
+[INFO] Start enumerating objects 
+[INFO] Start counting objects 
+[INFO] Start compressing objects 
+[INFO] Start receiving objects 
+[INFO] Start resolving deltas 
+[INFO] Completed clone attempts for Dataset(/home/nlo/scripts/abide-pydra/download/RawData/USM_1) 
+[WARNING] Running get resulted in stderr output: download failed: .git/annex/tmp/MD5E-s5061883--dd47c0b05bd18d52af440758a824323e.nii.gz: hClose: permission denied (Disk quota exceeded)
+download failed: .git/annex/tmp/MD5E-s27870759--bfd78c13b336b86f73b2d39e8c44b88e.nii.gz: openBinaryFile: permission denied (Disk quota exceeded)
+download failed: .git/annex/tmp/MD5E-s25521089--1833884f2f8e5586f4fc4f61737479a3.nii.gz: hClose: permission denied (Disk quota exceeded)
+download failed: .git/annex/tmp/MD5E-s27776502--5e1e207e61eef2a37a8e45d0f9a04ae2.nii.gz: hPutBuf: permission denied (Disk quota exceeded)
+download failed: .git/annex/tmp/MD5E-s26836738--158f0705efd719837a5dbdadff488dbc.nii.gz: hPutBuf: permission denied (Disk quota exceeded)
+download failed: .git/annex/tmp/MD5E-s25521089--1833884f2f8e5586f4fc4f61737479a3.nii.gz: hClose: permission denied (Disk quota exceeded)
+download failed: .git/annex/tmp/MD5E-s26836738--158f0705efd719837a5dbdadff488dbc.nii.gz: hClose: permission denied (Disk quota exceeded)
+download failed: .git/annex/tmp/... 
+[ERROR] git-annex: .git/annex/objects/mV: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29022/ses-1/dwi/sub-29022_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] verification of content failed [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29024/ses-1/anat/sub-29024_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/objects/Vp/JX: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29024/ses-1/anat/sub-29024_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] verification of content failed [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29023/ses-1/dwi/sub-29023_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] verification of content failed [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29023/ses-1/func/sub-29023_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/objects/jj: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29025/ses-1/anat/sub-29025_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] verification of content failed [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29024/ses-1/dwi/sub-29024_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] verification of content failed [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29024/ses-1/func/sub-29024_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] verification of content failed [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29025/ses-1/func/sub-29025_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] verification of content failed [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29026/ses-1/anat/sub-29026_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29025/ses-1/anat/sub-29025_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] verification of content failed [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29026/ses-1/dwi/sub-29026_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] verification of content failed [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29026/ses-1/anat/sub-29026_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] verification of content failed [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29027/ses-1/anat/sub-29027_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] verification of content failed [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29025/ses-1/dwi/sub-29025_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/objects/Z1: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29028/ses-1/anat/sub-29028_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] verification of content failed [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29026/ses-1/func/sub-29026_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] verification of content failed [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29028/ses-1/anat/sub-29028_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] verification of content failed [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29027/ses-1/anat/sub-29027_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] verification of content failed [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29027/ses-1/func/sub-29027_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] verification of content failed [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29027/ses-1/dwi/sub-29027_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29028/ses-1/func/sub-29028_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/objects/g6: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29029/ses-1/anat/sub-29029_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29028/ses-1/dwi/sub-29028_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] verification of content failed [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29029/ses-1/anat/sub-29029_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] verification of content failed [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29030/ses-1/anat/sub-29030_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] verification of content failed [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29030/ses-1/anat/sub-29030_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29030/ses-1/dwi/sub-29030_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] verification of content failed [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29029/ses-1/dwi/sub-29029_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] verification of content failed [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29029/ses-1/func/sub-29029_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29030/ses-1/func/sub-29030_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29031/ses-1/anat/sub-29031_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29031/ses-1/anat/sub-29031_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29031/ses-1/dwi/sub-29031_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] verification of content failed [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29032/ses-1/anat/sub-29032_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29031/ses-1/func/sub-29031_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29032/ses-1/anat/sub-29032_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29032/ses-1/dwi/sub-29032_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29032/ses-1/func/sub-29032_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29033/ses-1/anat/sub-29033_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29033/ses-1/anat/sub-29033_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29033/ses-1/dwi/sub-29033_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29033/ses-1/func/sub-29033_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29034/ses-1/anat/sub-29034_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29034/ses-1/anat/sub-29034_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29034/ses-1/dwi/sub-29034_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29034/ses-1/func/sub-29034_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29035/ses-1/anat/sub-29035_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29035/ses-1/anat/sub-29035_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29035/ses-1/dwi/sub-29035_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29035/ses-1/func/sub-29035_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29036/ses-1/anat/sub-29036_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29036/ses-1/anat/sub-29036_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29036/ses-1/dwi/sub-29036_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29036/ses-1/func/sub-29036_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29037/ses-1/anat/sub-29037_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29037/ses-1/anat/sub-29037_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29037/ses-1/dwi/sub-29037_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29037/ses-1/func/sub-29037_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29038/ses-1/anat/sub-29038_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29038/ses-1/anat/sub-29038_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29038/ses-1/dwi/sub-29038_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29038/ses-1/func/sub-29038_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29039/ses-1/anat/sub-29039_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29039/ses-1/anat/sub-29039_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29039/ses-1/dwi/sub-29039_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29039/ses-1/func/sub-29039_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29040/ses-1/anat/sub-29040_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29040/ses-1/anat/sub-29040_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29040/ses-1/dwi/sub-29040_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29040/ses-1/func/sub-29040_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29041/ses-1/anat/sub-29041_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29041/ses-1/anat/sub-29041_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29041/ses-1/dwi/sub-29041_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29041/ses-1/func/sub-29041_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29042/ses-1/anat/sub-29042_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29042/ses-1/anat/sub-29042_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29042/ses-1/dwi/sub-29042_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29042/ses-1/func/sub-29042_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29043/ses-1/anat/sub-29043_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29043/ses-1/anat/sub-29043_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29043/ses-1/dwi/sub-29043_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29043/ses-1/func/sub-29043_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29044/ses-1/anat/sub-29044_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29044/ses-1/anat/sub-29044_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29044/ses-1/dwi/sub-29044_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29044/ses-1/func/sub-29044_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29045/ses-1/anat/sub-29045_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29045/ses-1/anat/sub-29045_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29045/ses-1/dwi/sub-29045_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29045/ses-1/func/sub-29045_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29046/ses-1/anat/sub-29046_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29046/ses-1/anat/sub-29046_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29046/ses-1/dwi/sub-29046_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29046/ses-1/func/sub-29046_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29047/ses-1/anat/sub-29047_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29047/ses-1/anat/sub-29047_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29047/ses-1/dwi/sub-29047_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29047/ses-1/func/sub-29047_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29048/ses-1/anat/sub-29048_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29048/ses-1/anat/sub-29048_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29048/ses-1/dwi/sub-29048_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29048/ses-1/func/sub-29048_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29049/ses-1/anat/sub-29049_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29049/ses-1/anat/sub-29049_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29049/ses-1/dwi/sub-29049_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29049/ses-1/func/sub-29049_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29050/ses-1/anat/sub-29050_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29050/ses-1/anat/sub-29050_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29050/ses-1/dwi/sub-29050_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29050/ses-1/func/sub-29050_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29051/ses-1/anat/sub-29051_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29051/ses-1/anat/sub-29051_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29051/ses-1/dwi/sub-29051_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29051/ses-1/func/sub-29051_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29052/ses-1/anat/sub-29052_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29052/ses-1/anat/sub-29052_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29052/ses-1/dwi/sub-29052_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29052/ses-1/func/sub-29052_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29053/ses-1/anat/sub-29053_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29053/ses-1/anat/sub-29053_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29053/ses-1/dwi/sub-29053_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29053/ses-1/func/sub-29053_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29054/ses-1/anat/sub-29054_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29054/ses-1/anat/sub-29054_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29054/ses-1/dwi/sub-29054_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29054/ses-1/func/sub-29054_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29055/ses-1/anat/sub-29055_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29055/ses-1/anat/sub-29055_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29055/ses-1/dwi/sub-29055_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29055/ses-1/func/sub-29055_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29056/ses-1/anat/sub-29056_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29056/ses-1/anat/sub-29056_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29056/ses-1/dwi/sub-29056_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-29056/ses-1/func/sub-29056_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30144/ses-1/anat/sub-30144_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30144/ses-1/dwi/sub-30144_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/objects/km: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30146/ses-1/anat/sub-30146_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30146/ses-1/anat/sub-30146_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30144/ses-1/func/sub-30144_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30146/ses-1/func/sub-30146_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30146/ses-1/dwi/sub-30146_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30147/ses-1/anat/sub-30147_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30147/ses-1/anat/sub-30147_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30147/ses-1/dwi/sub-30147_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30147/ses-1/func/sub-30147_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30148/ses-1/anat/sub-30148_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30148/ses-1/anat/sub-30148_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30148/ses-1/func/sub-30148_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30148/ses-1/dwi/sub-30148_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30149/ses-1/anat/sub-30149_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30149/ses-1/anat/sub-30149_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30149/ses-1/func/sub-30149_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30149/ses-1/dwi/sub-30149_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30150/ses-1/anat/sub-30150_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30150/ses-1/anat/sub-30150_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30150/ses-1/func/sub-30150_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30150/ses-1/dwi/sub-30150_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30151/ses-1/anat/sub-30151_ses-1_run-1_FLAIR.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30151/ses-1/anat/sub-30151_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30151/ses-1/dwi/sub-30151_ses-1_run-1_dwi.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/sub-30151/ses-1/func/sub-30151_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/transfer/failed: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/BNI_1/task-rest_bold.json)] 
+[WARNING] Running get resulted in stderr output: git-annex: get: 111 failed
+ 
+[ERROR] git-annex: .git/annex/tmp: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/EMC_1/participants.tsv)] 
+[ERROR] git-annex: .git/annex/tmp: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/EMC_1/T1w.json)] 
+[ERROR] git-annex: .git/annex/tmp: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/EMC_1/sub-29865/ses-1/func/sub-29865_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/tmp: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/EMC_1/sub-29865/ses-1/anat/sub-29865_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/tmp: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/EMC_1/sub-29864/ses-1/anat/sub-29864_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/tmp: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/EMC_1/sub-29866/ses-1/anat/sub-29866_ses-1_run-1_T1w.nii.gz)] 
+[ERROR] git-annex: .git/annex/tmp: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/EMC_1/sub-29866/ses-1/func/sub-29866_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/tmp: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/download/RawData/EMC_1/sub-29864/ses-1/func/sub-29864_ses-1_task-rest_run-1_bold.nii.gz)] 
+[ERROR] git-annex: .git/annex/tmp: createDirectory: permission denied (Disk quota exceeded) [get(/home/nlo/scripts/abide-pydra/d
