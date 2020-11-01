@@ -1,0 +1,35 @@
+Test pydra on ABIDE2, test  bash on ABIDE
+----------------------------------------------
+BASH
+- use old workflow to determine optimal resources usage
+
+18201725
+ - run on ABIDE Yale with these params. Most jobs didn't finish.
+-  Saved in /scratch/Thu/nlo/abide-processed/Yale
+
+#SBATCH -J abide-fmriprep
+#SBATCH -t 8:00:00
+#SBATCH --mem=64GB
+#SBATCH --cpus-per-task=4
+
+
+18290601
+ABIDE CMU_a
+-t 16:00:00
+--mem=8GB
+--cpu-per-task=4
+
+One job ran out of memory, some jobs completed some time out with 16hours
+
+ABIDE CMU_b
+#SBATCH -t 1-00:00:00
+#SBATCH --mem=12GB
+#SBATCH --cpus-per-task=4
+
+
+----------------------------------------------
+PYDRA TESTING
+process id 1997
+pydra_cache = /scratch/Thu/nlo/cache_dir/singularitytask1
+
+test splitter fmriprep --help and --version

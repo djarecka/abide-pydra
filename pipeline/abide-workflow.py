@@ -30,7 +30,7 @@ def create_cmd(
     workdir_template=None,
     nthreads=4,
     output_space="fsaverage6",
-    mem_mb=7800,
+    mem_mb=11000,
 ):
 
     # assuming base_path is binded to the container as '/BASE' or base_name
@@ -98,7 +98,7 @@ wf.add(
 
 wf.set_output([("out", wf.fmriprep.lzout.out)])
 
-sbatch_args = "-J abide-fmriprep -t 16:00:00 --mem=8GB --cpus-per-task=4"
+sbatch_args = "-J abide-fmriprep -t 1-00:00:00 --mem=12GB --cpus-per-task=4"
 with Submitter(plugin="slurm", sbatch_args=sbatch_args) as sub:
     sub(wf)
 

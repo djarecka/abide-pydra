@@ -2,7 +2,7 @@
 
 base=/scratch/Thu/nlo
 dataset=abide
-site=CMU_a
+site=CMU_b
 
 # first go to data directory, grab all subjects,
 # and assign to an array

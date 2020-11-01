@@ -6,8 +6,8 @@
 #   $2 - array of subjects
 
 #SBATCH -J abide-fmriprep
-#SBATCH -t 16:00:00
-#SBATCH --mem=8GB
+#SBATCH -t 1-00:00:00
+#SBATCH --mem=12GB
 #SBATCH --cpus-per-task=4
 
 BASE=$1
@@ -36,6 +36,6 @@ singularity exec -B $BASE:/BASE -e $IMGPATH \
 fmriprep $DATADIR $OUTDIR participant --participant_label $SUBJECT --nthreads 4 \
 --output-space fsaverage6 \
 --use-aroma --ignore-aroma-denoising-errors \
---skip-bids-validation --mem_mb 7800 --fs-license-file $FS_LICENSE \
+--skip-bids-validation --mem_mb 11000 --fs-license-file $FS_LICENSE \
 --ignore slicetiming -w $WORKDIR --cifti-output 
 
