@@ -11,7 +11,7 @@ import os
 BASE = "/scratch/Thu/nlo"
 DATADIR = "/BASE/abide/Yale"
 OUTDIR = "/BASE/abide/Yale/derivatives"
-CACHEDIR = "/scratch/Thu/nlo/pydra_cache_dir"
+CACHEDIR = "/scratch/Thu/nlo/pydra_cache_dir/20201102-Yale-50627"
 WORKDIR = "/BASE/fmriprep_work_dir"
 
 FS_LICENSE = "/home/nlo/.freesurfer_license.txt"
@@ -22,13 +22,13 @@ if not os.path.exists(DATADIR.replace("/BASE", BASE)):
 if not os.path.exists(OUTDIR.replace("/BASE", BASE)):
     os.makedirs(OUTDIR.replace("/BASE", BASE))
 
-SUBJECT = "sub-0050551"
+SUBJECT = "sub-0050627"
 
 
 CMD = f"fmriprep {DATADIR} {OUTDIR} -w {WORKDIR} \
-participant --participant_label {SUBJECT} --nthreads 4 \
+participant --participant_label {SUBJECT} --nthreads 1 \
 --output-space fsaverage6 --use-aroma --ignore-aroma-denoising-errors \
---skip-bids-validation --mem_mb 11000 --fs-license-file {FS_LICENSE} \
+--skip-bids-validation --mem_mb 9500 --fs-license-file {FS_LICENSE} \
 --ignore slicetiming --cifti-output".split(
     " "
 )
@@ -44,7 +44,7 @@ singu = SingularityTask(
 )
 
 
-sbatch_args = "-J pydra-test -t 1-00:00:00 --mem=12GB --cpus-per-task=4"
+sbatch_args = "-J pydra-test -t 1-00:00:00 --mem=10GB --cpus-per-task=1"
 
 with Submitter(plugin="slurm", sbatch_args=sbatch_args) as sub:
     singu(submitter=sub)
@@ -58,11 +58,11 @@ print(f"res.output.return_code = {res.output.return_code}")
 
 
 # SAVE FMRIPREP OUTPUT
-# fmriprep_stdout = f'/home/nlo/scripts/abide-pydra/pipeline/{SUBJECT}.stdout'
-# fmriprep_stderr = f'/home/nlo/scripts/abide-pydra/pipeline/{SUBJECT}.stderr'
+fmriprep_stdout = f'/home/nlo/scripts/abide-pydra/pipeline/{SUBJECT}.stdout'
+fmriprep_stderr = f'/home/nlo/scripts/abide-pydra/pipeline/{SUBJECT}.stderr'
 
-# with open(fmriprep_stdout, 'w+') as f:
-#    f.write(str(res.output.stdout))
+with open(fmriprep_stdout, 'w+') as f:
+   f.write(str(res.output.stdout))
 
-# with open(fmriprep_stderr, 'w+') as f:
-#    f.write(str(res.output.stderr))
+with open(fmriprep_stderr, 'w+') as f:
+   f.write(str(res.output.stderr))

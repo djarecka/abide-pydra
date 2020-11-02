@@ -1,5 +1,5 @@
 import pydra
-from pydra.engine.task import SingularityTask
+from pydra.engine.task import SingularityTask, ShellCommandTask
 from pydra.engine.submitter import Submitter
 from pydra.engine.core import Workflow
 
@@ -14,7 +14,8 @@ def get_subject(base_path, dataset, site):
         for s in os.listdir(datadir)
         if (s.startswith("sub-") and os.path.isdir(os.path.join(datadir, s)))
     ]
-    return subjects
+    return ['sub-0050625', 'sub-0050626']
+#    return subjects
 
 
 @pydra.mark.task
@@ -53,7 +54,7 @@ def create_cmd(
 wf_inputs = {
     "base_path": "/scratch/Thu/nlo",
     "dataset": "abide",
-    "site": "KKI",
+    "site": "Yale",
     "fs_license": "/home/nlo/.freesurfer_license.txt",
     "image_path": "/om4/group/gablab/data/singularity-images/fmriprep-v1.3.0p2.sif",
 }
@@ -61,7 +62,7 @@ wf_inputs = {
 
 wf = Workflow(name="wf", input_spec=list(wf_inputs.keys()), **wf_inputs)
 # hard coding cache_dir for now
-wf.cache_dir = "/scratch/Thu/nlo/pydra_cache_dir/KKI" 
+wf.cache_dir = "/scratch/Thu/nlo/pydra_cache_dir/20201101-Yale-0050625-6" 
 
 wf.add(
     get_subject(
@@ -95,6 +96,6 @@ wf.add(
 wf.set_output([("out", wf.fmriprep.lzout.stdout),
                ("err", wf.fmriprep.lzout.stderr)])
 
-sbatch_args = "-J KKI -t 1-00:00:00 --mem=12GB --cpus-per-task=4"
+sbatch_args = "-J s50625-6 -t 1-00:00:00 --mem=12GB --cpus-per-task=4"
 with Submitter(plugin="slurm", sbatch_args=sbatch_args) as sub:
     sub(wf)

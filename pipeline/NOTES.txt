@@ -21,6 +21,7 @@ ABIDE CMU_a
 
 One job ran out of memory, some jobs completed some time out with 16hours
 
+SLURM ID - 18310082
 ABIDE CMU_b
 #SBATCH -t 1-00:00:00
 #SBATCH --mem=12GB
@@ -28,8 +29,58 @@ ABIDE CMU_b
 
 
 ----------------------------------------------
-PYDRA TESTING
-process id 1997
-pydra_cache = /scratch/Thu/nlo/cache_dir/singularitytask1
+PYDRA JOBS NOT WORKING
 
-test splitter fmriprep --help and --version
+SLURM - 18312886
+abide-ss-workflow.py
+0050620 Yale ABIDE
+
+
+SLURM - 18313170
+abide-ss-workflow.py
+0050622 Yale ABIDE
+wf.cache_dir = "/scratch/Thu/nlo/pydra_cache_dir/20201101-Yale-0050622
+
+SLURM - 18313533
+abide-ss-workflow.py # modified
+0050623 Yale ABIDE
+wf.cache_dir = "/scratch/Thu/nlo/pydra_cache_dir/20201101-Yale-0050623
+
+
+----------------------------------------------
+WORKING PYDRA JOBS
+
+SLURM - 18312929
+fmriprep-ss-task-test.py
+0050621 Yale ABIDE
+wf.cache_dir = "/scratch/Thu/nlo/pydra_cache_dir/20201101-0050621
+# one SingularityTask, hard coded
+
+
+SLURM - 18314443
+abide-ss-workflow.py
+0050624 Yale ABIDE
+wf.cache_dir = "/scratch/Thu/nlo/pydra_cache_dir/20201101-Yale-0050624
+# Workflow, hard coded for one subject
+
+
+SLURM - 18318837
+abide-2s-workflow.py 
+0050625 and 0050626 Yale ABIDE
+wf.cache_dir = "/scratch/Thu/nlo/pydra_cache_dir/20201101-Yale-0050625-6
+# Workflow, hard coded for two subjects
+
+
+SLURM - 18333330
+fmriprep-ss-task-test.py
+0050627 Yale ABIDE
+cpu==1, mem=10GB, time==1-00:00:00
+mem_mb=9500, nthreads=1
+wf.cache_dir = "/scratch/Thu/nlo/pydra_cache_dir/20201102-Yale-0050627
+
+SLURM - 18333654
+abide-ss-workflow.py
+0050628 Yale ABIDE
+cpu==2, mem=10GB, time==1-00:00:00
+mem_mb=9500, nthreads=2
+wf.cache_dir = "/scratch/Thu/nlo/pydra_cache_dir/20201102-Yale-0050628
