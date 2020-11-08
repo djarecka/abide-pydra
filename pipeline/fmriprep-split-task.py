@@ -11,7 +11,7 @@ import os
 BASE = "/scratch/Thu/nlo"
 DATADIR = "/BASE/abide/Yale"
 OUTDIR = "/BASE/abide/Yale/derivatives"
-CACHEDIR = "/scratch/Thu/nlo/pydra_cache_dir/Yale-50552"
+CACHEDIR = "/scratch/Thu/nlo/pydra_cache_dir/Yale-50571-3"
 WORKDIR = "/BASE/fmriprep_work_dir"
 
 FS_LICENSE = "/home/nlo/.freesurfer_license.txt"
@@ -22,27 +22,28 @@ if not os.path.exists(DATADIR.replace("/BASE", BASE)):
 if not os.path.exists(OUTDIR.replace("/BASE", BASE)):
     os.makedirs(OUTDIR.replace("/BASE", BASE))
 
-SUBJECT = "sub-0050552"
+SUBJECT = ["sub-0050571","sub-0050572", "sub-0050573"]
+CMD_LIST = list()
 
-
-CMD = f"fmriprep {DATADIR} {OUTDIR} -w {WORKDIR} \
-participant --participant_label {SUBJECT} --nthreads 1 \
---output-space fsaverage6 --use-aroma --ignore-aroma-denoising-errors \
---skip-bids-validation --mem_mb 9500 --fs-license-file {FS_LICENSE} \
---ignore slicetiming --cifti-output".split()
+for s in SUBJECT:
+    CMD = f"fmriprep {DATADIR} {OUTDIR} -w {WORKDIR} \
+    participant --participant_label {s} --nthreads 1 \
+    --output-space fsaverage6 --use-aroma --ignore-aroma-denoising-errors \
+    --skip-bids-validation --mem_mb 9500 --fs-license-file {FS_LICENSE} \
+    --ignore slicetiming --cifti-output".split()
+    CMD_LIST.append(CMD)
 
 
 #####################################################################
 singu = SingularityTask(
     name="fmriprep",
-    executable=CMD,
+    executable=CMD_LIST,
     image=IMAGE,
     cache_dir=CACHEDIR,
     bindings=[(BASE, "/BASE", "rw")],
-)
+).split("executable")
 
-
-sbatch_args = "-J Yale-50552 -t 1-00:00:00 --mem=10GB --cpus-per-task=1"
+sbatch_args = "-J Yale-50571-3 -t 1-00:00:00 --mem=10GB --cpus-per-task=1"
 
 with Submitter(plugin="slurm", sbatch_args=sbatch_args) as sub:
     singu(submitter=sub)
@@ -54,13 +55,3 @@ print(f"res.output.stdout = {res.output.stdout}")
 print()
 print(f"res.output.return_code = {res.output.return_code}")
 
-
-# SAVE FMRIPREP OUTPUT
-fmriprep_stdout = f'/home/nlo/scripts/abide-pydra/pipeline/{SUBJECT}.stdout'
-fmriprep_stderr = f'/home/nlo/scripts/abide-pydra/pipeline/{SUBJECT}.stderr'
-
-with open(fmriprep_stdout, 'w+') as f:
-   f.write(str(res.output.stdout))
-
-with open(fmriprep_stderr, 'w+') as f:
-   f.write(str(res.output.stderr))
