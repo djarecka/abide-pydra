@@ -1,5 +1,6 @@
 import pydra
 from pydra.engine.task import SingularityTask, ShellCommandTask
+from pydra.utils.messenger import AuditFlag, FileMessenger
 from pydra.engine.submitter import Submitter
 from pydra.engine.core import Workflow
 
@@ -8,14 +9,14 @@ import os
 #####################################################################
 # Create pydra tasks
 @pydra.mark.task
-def get_subject(base_path, dataset, site):
+def get_subjects(base_path, dataset, site):
     datadir = os.path.join(base_path, dataset, site)
     subjects = [
         s
         for s in os.listdir(datadir)
         if (s.startswith("sub-") and os.path.isdir(os.path.join(datadir, s)))
     ]
-    return ["sub-0050574", "sub-0050575", "sub-0050576"]
+    return ["sub-51209", "sub-51215", "sub-51231"]
     # return subjects
 
 
@@ -42,6 +43,7 @@ def create_fmriprep_cmd(
     datadir_template = os.path.join("/BASE", dataset, site)
     outdir_template = os.path.join("/BASE", dataset, site, "derivatives")
     workdir_template = os.path.join("/BASE", workdir, dataset, site, subject)
+    fs_license = os.path.join("/BASE", fs_license)
 
     cmd = f"fmriprep {datadir_template} {outdir_template} \
     -w {workdir_template} participant --participant_label {subject} \
@@ -58,13 +60,20 @@ def create_fmriprep_cmd(
 wf_inputs = {
     "base_path": "/scratch/Thu/nlo",  # "/Users/gablab/Desktop/nlo/openmind/abide-pydra",
     "dataset": "abide2",
-    "site": "UCLA_Long",
-    "fs_license": "/home/nlo/.freesurfer_license.txt",
+    "site": "UPSM_Long",
+    "fs_license": ".freesurfer_license.txt",
     "workdir": "fmriprep-workdir",
 }
 
 
-wf = Workflow(name="wf", input_spec=list(wf_inputs.keys()), **wf_inputs)
+wf = Workflow(
+    name="wf",
+    input_spec=list(wf_inputs.keys()),
+    audit_flags=AuditFlag.ALL,
+    messengers=FileMessenger(),
+    messenger_args={"message_dir": os.path.join(os.getcwd(), "messages")},
+    **wf_inputs,
+)
 # subjects from same site uses one pydra cache
 pydra_cache = "/scratch/Thu/nlo/pydra-cache/{dataset}/{site}".format(**wf_inputs)
 # pydra_cache = "/Users/gablab/Desktop/nlo/openmind/abide-pydra/pydra-cache/{dataset}/{site}".format(
@@ -76,8 +85,8 @@ wf.cache_dir = pydra_cache
 
 
 wf.add(
-    get_subject(
-        name="get_subject",
+    get_subjects(
+        name="get_subjects",
         base_path=wf.lzin.base_path,
         dataset=wf.lzin.dataset,
         site=wf.lzin.site,
@@ -86,7 +95,7 @@ wf.add(
 wf.add(
     create_fmriprep_cmd(
         name="create_cmd",
-        subject=wf.get_subject.lzout.out,
+        subject=wf.get_subjects.lzout.out,
         base_path=wf.lzin.base_path,
         dataset=wf.lzin.dataset,
         site=wf.lzin.site,
@@ -105,6 +114,7 @@ cmd_list = res.output.out
 # wf2 = Workflow(name="wf2", input_spec=['executable', 'image'])
 singu = SingularityTask(
     name="fmriprep",
+    cache_dir=pydra_cache,
     executable=cmd_list,
     image="/om4/group/gablab/data/singularity-images/fmriprep-v1.3.0p2.sif",
     bindings=[(wf_inputs["base_path"], "/BASE", "rw")],
