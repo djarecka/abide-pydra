@@ -1,8 +1,8 @@
 #!/bin/bash
 
 base=/scratch/Thu/nlo
-dataset=abide
-site=CMU_b
+dataset=abide2
+site=TCD_1
 
 # first go to data directory, grab all subjects,
 # and assign to an array

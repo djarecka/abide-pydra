@@ -9,12 +9,12 @@ import subprocess
 #####################################################################
 # specify inputs
 
-BASE = "/Users/gablab/Desktop/nlo/openmind/abide-pydra" #"/scratch/Thu/nlo" # "/Users/gablab/Desktop/nlo/openmind/abide-pydra"
+BASE = "/scratch/Thu/nlo" # "/Users/gablab/Desktop/nlo/openmind/abide-pydra"
 DATASET = "abide2"
 SITES = "UCLA_Long"
 
 IMAGE = "/om4/group/gablab/data/singularity-images/fmriprep-v1.3.0p2.sif"
-PYDRA_CACHE = "/Users/gablab/Desktop/nlo/openmind/abide-pydra/pydra-cache" #"/scratch/Thu/nlo/pydra-cache" 
+PYDRA_CACHE = "/scratch/Thu/nlo/pydra-cache" 
 SBATCH_ARGS = "--time 1-00:00:00 --mem=10GB --cpus-per-task=1"
 
 FMRIPREP_ARGS = dict(
@@ -58,7 +58,7 @@ def gen_tasks(
             # run each task as subprocess
             script = "run_fmriprep.py"
             run_script_cmd = f'python {script} -c {fmriprep_cmd} -i {image} -pc {sub_pydra_cache} \
-            -b {base} -sa {sub_pydra_cache} &'
+            -b {base} -sa {sub_pydra_cache}'.split()
             #run_script_cmd = f"echo hello {site} {sub}"
             p = subprocess.Popen(run_script_cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, 
                 close_fds=True, shell=True)

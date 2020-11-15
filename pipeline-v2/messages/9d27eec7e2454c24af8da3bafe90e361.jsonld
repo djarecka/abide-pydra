@@ -1,0 +1,6 @@
+{
+  "@context": "https://raw.githubusercontent.com/nipype/pydra/master/pydra/schema/context.jsonld",
+  "@type": "prov:Generation",
+  "entity_generated": "uid:b99960edf4d24e31aabf28b0c5e1a912",
+  "hadActivity": "uid:be0eba04643443d69b94c0f87cb91f66"
+}

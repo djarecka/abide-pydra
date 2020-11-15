@@ -16,7 +16,7 @@ def get_subjects(base_path, dataset, site):
         for s in os.listdir(datadir)
         if (s.startswith("sub-") and os.path.isdir(os.path.join(datadir, s)))
     ]
-    return subjects[1:10]
+    return subjects[0:10]
 
 
 # for one subject
@@ -59,58 +59,14 @@ def create_fmriprep_cmd(
 wf_inputs = {
     "base_path": "/scratch/Thu/nlo",  # "/Users/gablab/Desktop/nlo/openmind/abide-pydra",
     "dataset": "abide2",
-    "site": "UCLA_Long",
+    "site": "USM",
     "fs_license": ".freesurfer_license.txt",
     "workdir": "fmriprep-workdir",
 }
 
+pydra_cache = "/scratch/Thu/nlo/pydra-cache/test1"
+cmd_list = ["pwd", "ls", "echo", "wc", "lh", "ss", "aw", "aa", "lk"]
 
-wf = Workflow(
-    name="wf",
-    input_spec=list(wf_inputs.keys()),
-    audit_flags=AuditFlag.ALL,
-    messengers=FileMessenger(),
-    messenger_args={"message_dir": os.path.join(os.getcwd(), "messages")},
-    **wf_inputs,
-)
-# subjects from same site uses one pydra cache
-pydra_cache = "/scratch/Thu/nlo/pydra-cache/{dataset}/{site}".format(**wf_inputs)
-# pydra_cache = "/Users/gablab/Desktop/nlo/openmind/abide-pydra/pydra-cache/{dataset}/{site}".format(
-#    **wf_inputs
-# )
-if not os.path.exists(pydra_cache):
-    os.makedirs(pydra_cache)
-wf.cache_dir = pydra_cache
-
-
-wf.add(
-    get_subjects(
-        name="get_subjects",
-        base_path=wf.lzin.base_path,
-        dataset=wf.lzin.dataset,
-        site=wf.lzin.site,
-    )
-)
-wf.add(
-    create_fmriprep_cmd(
-        name="create_cmd",
-        subject=wf.get_subjects.lzout.out,
-        base_path=wf.lzin.base_path,
-        dataset=wf.lzin.dataset,
-        site=wf.lzin.site,
-        fs_license=wf.lzin.fs_license,
-        workdir=wf.lzin.workdir,
-    ).split("subject")
-)
-wf.set_output([("out", wf.create_cmd.lzout.out)])
-
-with Submitter(plugin="cf") as sub:
-    sub(wf)
-
-res = wf.result()
-cmd_list = res.output.out
-
-# wf2 = Workflow(name="wf2", input_spec=['executable', 'image'])
 singu = SingularityTask(
     name="fmriprep",
     cache_dir=pydra_cache,

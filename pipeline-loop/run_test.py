@@ -1,5 +1,3 @@
-#!/Users/gablab/anaconda3/envs/pydra/bin/python
-
 #!/om2/user/nlo/miniconda/envs/pydra/bin/python
 
 import os, sys, argparse
@@ -16,7 +14,7 @@ def submit_task_test(argv):
 
 	args = parser.parse_args()
 	#print('inside run_test.py')
-	#print(args.command)
+	print(args.command)
 	with open('test.txt', 'a') as f:
 		f.write('inside run_test.py!!!!\n')
 		f.write(args.command)

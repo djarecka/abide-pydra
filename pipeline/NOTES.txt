@@ -55,23 +55,20 @@ mem_mb=9500, nthreads=1
 wf.cache_dir = "/scratch/Thu/nlo/pydra_cache_dir/Yale-50601-5
 SingularityTask errored for every subject.  Weird because single task version worked
 
-----------------------------------------------
-IN PROGRESS
 
-SLURM - INPROGRESS
-fmriprep-split-task2.py (split version of fmriprep-ss-task-test.py, using split(" ") for command)
+SLURM - ?? ran for a while and stopped abrupted
+fmriprep-split-task2.py (split version of fmriprep-ss-task-test.py, using split($
 0050561-5 Yale ABIDE
 cpu==1, mem=10GB, time==1-00:00:00
 mem_mb=9500, nthreads=1
 wf.cache_dir = "/scratch/Thu/nlo/pydra_cache_dir/Yale-50561-5
+For each subject singularityTask ran for a while (less than 2 hours) but stopped. 
+Some fmriprep output produced but task never finished
+SingularityTask files in pydra_cache_dir are still locked
 
+----------------------------------------------
+IN PROGRESS
 
-SLURM - 18411515
-fmriprep-ss-task-test.py (susing split("") for creating CMD)
-0050552 Yale ABIDE
-cpu==1, mem=10GB, time==1-00:00:00
-mem_mb=9500, nthreads=1
-wf.cache_dir = "/scratch/Thu/nlo/pydra_cache_dir/Yale-50552
 
 SLURM - INPROGRESS
 fmriprep-split-task.py (using split())
@@ -119,3 +116,10 @@ cpu==2, mem=10GB, time==1-00:00:00
 mem_mb=9500, nthreads=2
 wf.cache_dir = "/scratch/Thu/nlo/pydra_cache_dir/20201102-Yale-0050628
 
+
+SLURM - 18411515
+fmriprep-ss-task-test.py (susing split("") for creating CMD)
+0050552 Yale ABIDE
+cpu==1, mem=10GB, time==1-00:00:00
+mem_mb=9500, nthreads=1
+wf.cache_dir = "/scratch/Thu/nlo/pydra_cache_dir/Yale-50552

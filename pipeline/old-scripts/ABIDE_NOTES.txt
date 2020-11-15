@@ -1,0 +1,4 @@
+Can't debug pydra splitter in time.  Running ABIDE2 using old pipeline first
+
+Nov 9
+Submitted sites BNI_1 to TCD_1 already.  Some sites use the gablab partition

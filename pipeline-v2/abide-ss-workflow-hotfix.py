@@ -106,6 +106,6 @@ singu = SingularityTask(
 # wf.set_output([("out", wf.fmriprep.lzout.stdout),
 #                ("err", wf.fmriprep.lzout.stderr)])
 
-sbatch_args = "-J {site} -t 1-00:00:00 --mem=10GB --cpus-per-task=1".format(**wf_inputs)
+sbatch_args = "-J {site} -t 1-04:00 --mem=10GB --cpus-per-task=1".format(**wf_inputs)
 with Submitter(plugin="slurm", sbatch_args=sbatch_args) as sub:
     sub(singu)
