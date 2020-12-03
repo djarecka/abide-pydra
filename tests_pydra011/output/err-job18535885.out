@@ -1,0 +1,133 @@
+pytest -vvs --durations=0 --basetemp=/scratch/Thu/nlo/output/err/tmpdir /scratch/Thu/nlo/pytest_echo.py
+============================= test session starts ==============================
+platform linux -- Python 3.7.7, pytest-5.4.3, py-1.9.0, pluggy-0.13.1 -- /om2/user/nlo/miniconda/envs/pydra/bin/python3.7
+cachedir: .pytest_cache
+rootdir: /scratch/Thu/nlo
+plugins: cov-2.10.1, env-0.6.2, forked-1.3.0, rerunfailures-9.1.1, xdist-1.34.0
+collecting ... collected 1 item
+
+../../../../../scratch/Thu/nlo/::test_echo <- ../../../net/vast-storage.ib.cluster/scratch/Thu/nlo/pytest_echo.py Linux container, no bind, splitting on echo
+--------------------------------------------------
+Singularity Task arguments:
+image == fmriprep-20.2.0.sif
+tmpdir == /net/vast-storage.ib.cluster/scratch/Thu/nlo/output/err/tmpdir/test_echo0
+sbatch_args == -t 1-00:00 --mem=4GB --cpus-per-task=4 -p gablab
+cmd == echo
+
+--------------------------------------------------
+Submitter args
+sbatch_args == -t 1-00:00 --mem=4GB --cpus-per-task=4 -p gablab
+plugin == slurm
+n_procs == None
+
+Submitting job with 1 split(s)...
+FAILED
+
+=================================== FAILURES ===================================
+__________________________________ test_echo ___________________________________
+
+tmpdir = local('/net/vast-storage.ib.cluster/scratch/Thu/nlo/output/err/tmpdir/test_echo0')
+plugin = 'slurm', list_lens = [1, 2, 3, 8, 30, 100]
+sbatch_args = '-t 1-00:00 --mem=4GB --cpus-per-task=4 -p gablab'
+image = 'fmriprep-20.2.0.sif', n_procs = None
+
+    @need_singularity
+    def test_echo(
+        tmpdir,
+        plugin=PLUGIN,
+        list_lens=LIST_LENS,
+        sbatch_args=SBATCH_ARGS,
+        image=IMAGE,
+        n_procs=N_PROCS,
+    ):
+        """no splitting, no result"""
+        print("Linux container, no bind, splitting on echo")
+        print("--------------------------------------------------")
+        print("Singularity Task arguments:")
+        print(f"image == {image}")
+        print(f"tmpdir == {str(tmpdir)}")
+        print(f"sbatch_args == {sbatch_args}")
+    
+        cmd = "echo"
+        print(f"cmd == {cmd}")
+        print()
+        print("--------------------------------------------------")
+        print("Submitter args")
+        print(f"sbatch_args == {sbatch_args}")
+        print(f"plugin == {plugin}")
+        print(f"n_procs == {n_procs}")
+        image = image
+    
+        args = dict()
+        for i in list_lens:
+            if i == 1:
+                args = str(1)
+            else:
+                args = [str(i) for i in range(1, i + 1)]
+    
+            sub_tmpdir = str(tmpdir.join(f"fmriprep_echo{i}"))
+            singu = SingularityTask(
+                name=f"fp{i}", executable=cmd, args=args, image=image, cache_dir=tmpdir
+            )
+            # singu = FunctionTask(name='ft', executable=cmd, args=args, cache_dir=tmpdir)
+            if isinstance(args, list):
+                singu.split("args")
+    
+            print()
+            print(f"Submitting job with {i} split(s)...")
+            t0 = time.time()
+            with Submitter(plugin=plugin, sbatch_args=sbatch_args, n_procs=n_procs) as sub:
+                # with Submitter(plugin='cf') as sub:
+>               singu(submitter=sub)
+
+pytest_echo.py:102: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/home/nlo/scripts/nipype-pydra/pydra/engine/core.py:396: in __call__
+    res = sub(self)
+/home/nlo/scripts/nipype-pydra/pydra/engine/submitter.py:60: in __call__
+    self.loop.run_until_complete(self.submit(runnable, wait=True, rerun=rerun))
+/om2/user/nlo/miniconda/envs/pydra/lib/python3.7/asyncio/base_events.py:587: in run_until_complete
+    return future.result()
+/home/nlo/scripts/nipype-pydra/pydra/engine/submitter.py:134: in submit
+    await asyncio.gather(*futures)
+/home/nlo/scripts/nipype-pydra/pydra/engine/workers.py:301: in _submit_job
+    done = await self._poll_job(jobid)
+/home/nlo/scripts/nipype-pydra/pydra/engine/workers.py:322: in _poll_job
+    status = await self._verify_exit_code(jobid)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <pydra.engine.workers.SlurmWorker object at 0x2afb6a8e97d0>
+jobid = '18535886'
+
+    async def _verify_exit_code(self, jobid):
+        cmd = ("sacct", "-n", "-X", "-j", jobid, "-o", "JobID,State,ExitCode")
+        _, stdout, _ = await read_and_display_async(*cmd, hide_display=True)
+        if not stdout:
+            raise RuntimeError("Job information not found")
+        m = self._sacct_re.search(stdout)
+        error_file = self.error[jobid]
+        if int(m.group("exit_code")) != 0 or m.group("status") != "COMPLETED":
+            if m.group("status") in ["CANCELLED", "TIMEOUT", "PREEMPTED"]:
+                return m.group("status")
+            elif m.group("status") in ["RUNNING", "PENDING"]:
+                return False
+            # TODO: potential for requeuing
+            # parsing the error message
+            error_line = Path(error_file).read_text().split("\n")[-2]
+            if "Exception" in error_line:
+                error_message = error_line.replace("Exception: ", "")
+            elif "Error" in error_line:
+                error_message = error_line.replace("Exception: ", "")
+            else:
+                error_message = "Job failed (unknown reason - TODO)"
+>           raise Exception(error_message)
+E           Exception: FileNotFoundError: [Errno [Errno 2] No such file or directory: '/net/vast-storage.ib.cluster/scratch/Thu/nlo/output/err/tmpdir/test_echo0/SingularityTask_0a177a89f41e3ccbd41a5e9af4755fb6f6fd7b39244f98f6c781efb4072b3e40/_error.pklz']  full crash report is here: /net/vast-storage.ib.cluster/scratch/Thu/nlo/output/err/tmpdir/test_echo0/SingularityTask_8107b99c0aee2e561a27f773d549b1d3c6dc37f9c39dec3968dd2ba00754495f/_error.pklz
+
+/home/nlo/scripts/nipype-pydra/pydra/engine/workers.py:347: Exception
+============================ slowest test durations ============================
+161.69s call     ::test_echo
+0.02s setup    ::test_echo
+0.00s teardown ::test_echo
+=========================== short test summary info ============================
+FAILED ../../../../../scratch/Thu/nlo/::test_echo - Exception: FileNotFoundEr...
+======================== 1 failed in 162.07s (0:02:42) =========================

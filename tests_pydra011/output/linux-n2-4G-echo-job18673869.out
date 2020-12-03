@@ -1,0 +1,46 @@
+Pydra version:  0.11+24.gd298da8
+pytest -vvs --durations=0 --basetemp=/om2/scratch/Thu/nlo/tmpdir/alpine/tmpdir-n2-4G /om2/scratch/Thu/nlo/pytest_echo.py
+============================= test session starts ==============================
+platform linux -- Python 3.7.7, pytest-5.4.3, py-1.9.0, pluggy-0.13.1 -- /om2/user/nlo/miniconda/envs/pydra/bin/python3.7
+cachedir: .pytest_cache
+rootdir: /om2/scratch/Thu/nlo
+plugins: cov-2.10.1, env-0.6.2, forked-1.3.0, rerunfailures-9.1.1, xdist-1.34.0
+collecting ... collected 1 item
+
+../../../../../om2/scratch/Thu/nlo/::test_echo <- ../../../../rdma/vast-rdma/scratch/Thu/nlo/pytest_echo.py Linux container, no bind, splitting on echo
+--------------------------------------------------
+Singularity Task arguments:
+image == library://sylabsed/linux/alpine
+tmpdir == /rdma/vast-rdma/scratch/Thu/nlo/tmpdir/alpine/tmpdir-n2-4G/test_echo0
+cmd == echo
+
+--------------------------------------------------
+Submitter args
+job_sbatch_args == -t 1-00:00 --mem=4GB --cpus-per-task=4 -p gablab
+plugin == slurm
+n_procs == None
+
+Submitting job with 1 split(s)...
+Time to submit: 5.602550745010376 s
+
+Submitting job with 2 split(s)...
+Time to submit: 1.1169214248657227 s
+
+Submitting job with 3 split(s)...
+Time to submit: 1.0875258445739746 s
+
+Submitting job with 8 split(s)...
+Time to submit: 3.319807291030884 s
+
+Submitting job with 30 split(s)...
+Time to submit: 12.888926029205322 s
+
+Submitting job with 100 split(s)...
+Time to submit: 41.38652515411377 s
+PASSED
+
+============================ slowest test durations ============================
+66.28s call     ::test_echo
+0.03s setup    ::test_echo
+0.00s teardown ::test_echo
+========================= 1 passed in 66.44s (0:01:06) =========================
