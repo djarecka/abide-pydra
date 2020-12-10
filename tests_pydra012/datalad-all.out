@@ -1,0 +1,35 @@
+Linux container, no bind, splitting on echo
+--------------------------------------------------
+Singularity Task arguments:
+image == /om4/group/gablab/data/singularity-images/datalad-v0.12.7.sif
+tmpdir == /om2/scratch/Wed/nlo/tmpdir/datalad-all
+cmd == echo
+
+--------------------------------------------------
+Submitter args
+job_sbatch_args == -t 1-00:00 --mem=4GB --cpus-per-task=4 -p gablab
+plugin == slurm
+
+format: task(submitter=sub)
+Submitting job with 1 split(s)...
+Time to submit: 6.245828628540039 s
+
+format: task(submitter=sub)
+Submitting job with 2 split(s)...
+Time to submit: 8.243460655212402 s
+
+format: task(submitter=sub)
+Submitting job with 3 split(s)...
+Time to submit: 6.625138998031616 s
+
+format: task(submitter=sub)
+Submitting job with 8 split(s)...
+Time to submit: 12.758156299591064 s
+
+format: task(submitter=sub)
+Submitting job with 30 split(s)...
+Time to submit: 35.50671672821045 s
+
+format: task(submitter=sub)
+Submitting job with 100 split(s)...
+Time to submit: 163.21269702911377 s

@@ -1,0 +1,34 @@
+--------------------------------------------------
+Singularity Task arguments:
+image == /om4/group/gablab/data/singularity-images/alpine_latest.sif
+tmpdir == /om2/scratch/Wed/nlo/tmpdir/alpine-local-all
+cmd == echo
+
+--------------------------------------------------
+Submitter args
+job_sbatch_args == -t 1-00:00 --mem=4GB --cpus-per-task=4 -p gablab
+plugin == slurm
+
+format: task(submitter=sub)
+Submitting job with 1 split(s)...
+Time to submit: 4.67334246635437 s
+
+format: task(submitter=sub)
+Submitting job with 2 split(s)...
+Time to submit: 3.7002618312835693 s
+
+format: task(submitter=sub)
+Submitting job with 3 split(s)...
+Time to submit: 2.6597483158111572 s
+
+format: task(submitter=sub)
+Submitting job with 8 split(s)...
+Time to submit: 4.586973190307617 s
+
+format: task(submitter=sub)
+Submitting job with 30 split(s)...
+Time to submit: 7.421292066574097 s
+
+format: task(submitter=sub)
+Submitting job with 100 split(s)...
+Time to submit: 19.098313570022583 s

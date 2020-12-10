@@ -1,0 +1,37 @@
+Pydra version:  0.12+7.g00d6ea4
+python -u /om2/scratch/Thu/nlo/pytest_echo.py
+Linux container, no bind, splitting on echo
+--------------------------------------------------
+Singularity Task arguments:
+image == /om4/group/gablab/data/singularity-images/fmriprep-20.2.0.sif
+tmpdir == /om2/scratch/Wed/nlo/tmpdir/fmriprep-all-n10-4G
+cmd == echo
+
+--------------------------------------------------
+Submitter args
+job_sbatch_args == -t 20 --mem=4GB --cpus-per-task=2 -p gablab
+plugin == slurm
+
+format: task(submitter=sub)
+Submitting job with 1 split(s)...
+Time to submit: 50.094412326812744 s
+
+format: task(submitter=sub)
+Submitting job with 2 split(s)...
+Time to submit: 65.91504883766174 s
+
+format: task(submitter=sub)
+Submitting job with 3 split(s)...
+Time to submit: 82.6672728061676 s
+
+format: task(submitter=sub)
+Submitting job with 8 split(s)...
+Time to submit: 159.6053924560547 s
+
+format: task(submitter=sub)
+Submitting job with 30 split(s)...
+Time to submit: 494.50262808799744 s
+
+format: task(submitter=sub)
+Submitting job with 100 split(s)...
+Time to submit: 1594.058426618576 s
