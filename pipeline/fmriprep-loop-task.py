@@ -1,38 +1,60 @@
 # abide pydra pipeline
-# pydra v0.10
-# run with /om2/user/nlo/miniconda/envs/pydra/bin/python abide-pipeline-testing.py
+# pydra v0.12
+# run with /om2/user/nlo/miniconda/envs/pydra/bin/python -u fmriprep-loop-task.py
 import pydra
-from pydra.engine.task import SingularityTask, ShellCommandTask
-from pydra.engine.submitter import Submitter
+from pydra.engine.task import SingularityTask
+from pydra.utils.messenger AuditFlag, FileMessenger
 import os
 
 #####################################################################
+DATASET = "abide"
+SITE = "KKI"
 
-BASE = "/scratch/Thu/nlo"
-DATADIR = "/BASE/abide/Yale"
-OUTDIR = "/BASE/abide/Yale/derivatives"
-CACHEDIR = "/scratch/Thu/nlo/pydra_cache_dir/Yale-50571-3"
-WORKDIR = "/BASE/fmriprep_work_dir"
 
-FS_LICENSE = "/home/nlo/.freesurfer_license.txt"
-IMAGE = "/om4/group/gablab/data/singularity-images/fmriprep-v1.3.0p2.sif"
+BASE = "/om2/scratch/Thu/nlo"
+DATADIR = f"/BASE/{DATASET}/{SITE}"
+OUTDIR = f"/BASE/{DATASET}/{SITE}/derivatives"
+CACHEDIR = f"{BASE}/pydra-cache/{DATASET}/{SITE}"
+
+FS_LICENSE = f"/BASE/.freesurfer_license.txt"
+IMAGE = "/om4/group/gablab/data/singularity-images/fmriprep-20.2.0.sif"
 
 if not os.path.exists(DATADIR.replace("/BASE", BASE)):
     os.makedirs(DATADIR.replace("/BASE", BASE))
 if not os.path.exists(OUTDIR.replace("/BASE", BASE)):
     os.makedirs(OUTDIR.replace("/BASE", BASE))
+if not os.path.exists(CACHEDIR.replace("/BASE", BASE)):
+    os.makedirs(CACHEDIR.replace("/BASE", BASE))
 
-SUBJECT = ["sub-0050571","sub-0050572", "sub-0050573"]
+# SUBJECT = ["sub-0050571","sub-0050572", "sub-0050573"]
+BIDSDIR = f"{BASE}/{DATASET}/{SITE}"
+SUBJECTS = [
+    s
+    for s in os.listdir(BIDSDIR)
+    if (s.startswith("sub-") and os.path.isdir(os.path.join(BIDSDIR, s)))
+]
+SUBJECTS= SUBJECTS[:2] # testing
+print(f"SUBJECTS = {SUBJECTS}")
 CMD_LIST = list()
 
-for s in SUBJECT:
-    CMD = f"fmriprep {DATADIR} {OUTDIR} -w {WORKDIR} \
-    participant --participant_label {s} --nthreads 1 \
-    --output-space fsaverage6 --use-aroma --ignore-aroma-denoising-errors \
-    --skip-bids-validation --mem_mb 9500 --fs-license-file {FS_LICENSE} \
-    --ignore slicetiming --cifti-output".split()
+
+for s in SUBJECTS:
+
+    SUBWORKDIR = f"/BASE/fmriprep-workdir/{DATASET}/{SITE}/{s}"
+    if not os.path.exists(SUBWORKDIR.replace("/BASE", BASE)):
+        os.makedirs(SUBWORKDIR.replace("/BASE", BASE))
+
+    #--fs-license-file {FS_LICENSE} \
+    CMD = f"fmriprep {DATADIR} {OUTDIR} \
+    participant --participant_label {s} --nprocs 2 \
+    --output-space fsaverage6 --use-aroma \
+    --skip-bids-validation --mem_mb 7500 \
+    --fs-license-file /BASE/freesurfer_license.txt \
+    --ignore slicetiming --cifti-output -w {SUBWORKDIR}".split()
     CMD_LIST.append(CMD)
 
+print("Sample command:")
+print(CMD_LIST[0])
 
 #####################################################################
 singu = SingularityTask(
@@ -41,17 +63,29 @@ singu = SingularityTask(
     image=IMAGE,
     cache_dir=CACHEDIR,
     bindings=[(BASE, "/BASE", "rw")],
+    container_xargs=['--cleanenv'],
+    #audit_flags=AuditFlag.ALL,
+    #messenger=FileMessenger()
 ).split("executable")
 
-sbatch_args = "-J Yale-50571-3 -t 1-00:00:00 --mem=10GB --cpus-per-task=1"
+print()
+print("SingularityTask inputs:")
+print(singu.inputs)
+print()
+print("SingularityTask container_args:")
+print(singu.container_args)
+print()
 
-with Submitter(plugin="slurm", sbatch_args=sbatch_args) as sub:
+SBATCH_ARGS = f"-J {SITE} -t 30:00:00 --mem=8GB --cpus-per-task=2 -p gablab"
+print(f"sbatch_args:{SBATCH_ARGS}")
+
+with Submitter(plugin="slurm", sbatch_args=SBATCH_ARGS, max_jobs=400) as sub:
     singu(submitter=sub)
 res = singu.result()
 
 
 print("Done running!")
-print(f"res.output.stdout = {res.output.stdout}")
-print()
-print(f"res.output.return_code = {res.output.return_code}")
-
+print(res)
+#print(f"res.output.stdout = {res.output.stdout}")
+#print()
+#print(f"res.output.return_code = {res.output.return_code}")

@@ -3,15 +3,13 @@ import subprocess as sp
 import pytest
 import attr
 
-from ..task import SingularityTask, DockerTask, ShellCommandTask
-from ..submitter import Submitter
-from ..core import Workflow
-from ..specs import ShellOutSpec, SpecInfo, File, SingularitySpec
-
+import pydra
+from pydra.engine.task import SingularityTask
 
 need_singularity = pytest.mark.skipif(
     shutil.which("singularity") is None, reason="no singularity available"
 )
+plugin='cf'
 
 #####################################################################
 
