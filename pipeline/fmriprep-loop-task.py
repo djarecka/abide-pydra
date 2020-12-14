@@ -3,13 +3,13 @@
 # run with /om2/user/nlo/miniconda/envs/pydra/bin/python -u fmriprep-loop-task.py
 import pydra
 from pydra.engine.task import SingularityTask
-from pydra.utils.messenger AuditFlag, FileMessenger
+from pydra.engine.submitter import Submitter
+from pydra.utils.messenger import AuditFlag, FileMessenger
 import os
 
 #####################################################################
 DATASET = "abide"
-SITE = "KKI"
-
+SITE = "MaxMun_c"
 
 BASE = "/om2/scratch/Thu/nlo"
 DATADIR = f"/BASE/{DATASET}/{SITE}"
@@ -33,7 +33,7 @@ SUBJECTS = [
     for s in os.listdir(BIDSDIR)
     if (s.startswith("sub-") and os.path.isdir(os.path.join(BIDSDIR, s)))
 ]
-SUBJECTS= SUBJECTS[:2] # testing
+#SUBJECTS= SUBJECTS[:2] # testing
 print(f"SUBJECTS = {SUBJECTS}")
 CMD_LIST = list()
 
@@ -76,7 +76,7 @@ print("SingularityTask container_args:")
 print(singu.container_args)
 print()
 
-SBATCH_ARGS = f"-J {SITE} -t 30:00:00 --mem=8GB --cpus-per-task=2 -p gablab"
+SBATCH_ARGS = f"-J {SITE} -t 30:00:00 --mem=8GB --cpus-per-task=2 -p normal"
 print(f"sbatch_args:{SBATCH_ARGS}")
 
 with Submitter(plugin="slurm", sbatch_args=SBATCH_ARGS, max_jobs=400) as sub:

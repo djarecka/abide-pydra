@@ -2,7 +2,7 @@
 #SBATCH -n 2
 #SBATCH -t 4-00:00
 #SBATCH --mem=4GB
-#SBATCH -J KKI-submit 
+#SBATCH -J MaxMun_c-submit 
 #SBATCH -p gablab
 #SBATCH -o %x-job%A.out
 
