@@ -1,0 +1,9 @@
+1. sbatch_args not used if task is not submitted with context manager
+
+e.g.
+sub = Submitter(plugin="slurm", sbatch_args=SBATCH_ARGS, max_jobs=400)
+singu(submitter=sub)
+
+18891746    gablab no-cm-BN      nlo  R       2:21      1 node065
+18891756    normal    BNI_1      nlo  R       0:17      1 node044
+18891757    normal    BNI_1      nlo  R       0:17      1 node048

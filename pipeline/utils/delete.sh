@@ -1,8 +1,8 @@
 #!/bin/bash
 # delete fmirprep derivatives, pydra cache and fmriprep workdir
 
-DATASET=abide
-SITE=CMU_a
+DATASET=abide2
+SITE=ETHZ_1
 
 DERIVATIVES_DIR=/om2/scratch/Thu/nlo/${DATASET}/${SITE}/derivatives/
 CACHE_DIR=/om2/scratch/Thu/nlo/pydra-cache/${DATASET}/${SITE}

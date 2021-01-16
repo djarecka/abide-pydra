@@ -1,0 +1,15 @@
+Pydra version:  0.12+17.gd5d6236
+python -u /om2/scratch/Thu/nlo/scripts/pipeline/fmriprep-loop-task.py
+SUBJECTS = ['sub-0050772', 'sub-0050773']
+Sample command:
+['fmriprep', '/BASE/abide/KKI', '/BASE/abide/KKI/derivatives', 'participant', '--participant_label', 'sub-0050772', '--nprocs', '2', '--output-space', 'fsaverage6', '--use-aroma', '--skip-bids-validation', '--mem_mb', '7500', '--fs-license-file', '/BASE/freesurfer_license.txt', '--ignore', 'slicetiming', '--cifti-output', '-w', '/BASE/fmriprep-workdir/abide/KKI/sub-0050772']
+
+SingularityTask inputs:
+Inputs(executable=[['fmriprep', '/BASE/abide/KKI', '/BASE/abide/KKI/derivatives', 'participant', '--participant_label', 'sub-0050772', '--nprocs', '2', '--output-space', 'fsaverage6', '--use-aroma', '--skip-bids-validation', '--mem_mb', '7500', '--fs-license-file', '/BASE/freesurfer_license.txt', '--ignore', 'slicetiming', '--cifti-output', '-w', '/BASE/fmriprep-workdir/abide/KKI/sub-0050772'], ['fmriprep', '/BASE/abide/KKI', '/BASE/abide/KKI/derivatives', 'participant', '--participant_label', 'sub-0050773', '--nprocs', '2', '--output-space', 'fsaverage6', '--use-aroma', '--skip-bids-validation', '--mem_mb', '7500', '--fs-license-file', '/BASE/freesurfer_license.txt', '--ignore', 'slicetiming', '--cifti-output', '-w', '/BASE/fmriprep-workdir/abide/KKI/sub-0050773']], args=None, image='/om4/group/gablab/data/singularity-images/fmriprep-20.2.0.sif', container_xargs=['--cleanenv'], bindings=[('/om2/scratch/Thu/nlo', '/BASE', 'rw')], container='singularity')
+
+SingularityTask container_args:
+[['singularity', 'exec', '--cleanenv', '-B', '/om2/scratch/Thu/nlo:/BASE:rw', '-B', '/rdma/vast-rdma/scratch/Thu/nlo/pydra-cache/abide/KKI/SingularityTask_29a78a35dbd9599e0a7adffb77c85e391ae8ddc0d4f85ecfe3df4c476d724b09:/output_pydra:rw', '--pwd', '/output_pydra', '/om4/group/gablab/data/singularity-images/fmriprep-20.2.0.sif'], ['singularity', 'exec', '--cleanenv', '-B', '/om2/scratch/Thu/nlo:/BASE:rw', '-B', '/rdma/vast-rdma/scratch/Thu/nlo/pydra-cache/abide/KKI/SingularityTask_af66b25990e5ccc5a98905ac462ffd887dc37d94f55967362686998da91d7f56:/output_pydra:rw', '--pwd', '/output_pydra', '/om4/group/gablab/data/singularity-images/fmriprep-20.2.0.sif']]
+
+sbatch_args:-J KKI -t 30:00:00 --mem=8GB --cpus-per-task=2 -p gablab
+Done running!
+[Result(output=None, runtime=None, errored=True), Result(output=None, runtime=None, errored=True)]

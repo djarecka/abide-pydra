@@ -1,0 +1,31 @@
+Pydra version:  0.12+17.gd5d6236
+python -u /om2/scratch/Thu/nlo/scripts/pipeline/fmriprep-loop-task.py
+SUBJECTS = ['sub-0050774', 'sub-0050775']
+Sample command:
+['fmriprep', '/BASE/abide/KKI', '/BASE/abide/KKI/derivatives', 'participant', '--participant_label', 'sub-0050774', '--nprocs', '2', '--output-space', 'fsaverage6', '--use-aroma', '--skip-bids-validation', '--mem_mb', '7500', '--fs-license-file', '/BASE/freesurfer_license.txt', '--ignore', 'slicetiming', '--cifti-output', '-w', '/BASE/fmriprep-workdir/abide/KKI/sub-0050774']
+
+SingularityTask inputs:
+Inputs(executable=[['fmriprep', '/BASE/abide/KKI', '/BASE/abide/KKI/derivatives', 'participant', '--participant_label', 'sub-0050774', '--nprocs', '2', '--output-space', 'fsaverage6', '--use-aroma', '--skip-bids-validation', '--mem_mb', '7500', '--fs-license-file', '/BASE/freesurfer_license.txt', '--ignore', 'slicetiming', '--cifti-output', '-w', '/BASE/fmriprep-workdir/abide/KKI/sub-0050774'], ['fmriprep', '/BASE/abide/KKI', '/BASE/abide/KKI/derivatives', 'participant', '--participant_label', 'sub-0050775', '--nprocs', '2', '--output-space', 'fsaverage6', '--use-aroma', '--skip-bids-validation', '--mem_mb', '7500', '--fs-license-file', '/BASE/freesurfer_license.txt', '--ignore', 'slicetiming', '--cifti-output', '-w', '/BASE/fmriprep-workdir/abide/KKI/sub-0050775']], args=None, image='/om4/group/gablab/data/singularity-images/fmriprep-20.2.0.sif', container_xargs=['--cleanenv'], bindings=[('/om2/scratch/Thu/nlo', '/BASE', 'rw')], container='singularity')
+
+SingularityTask container_args:
+[['singularity', 'exec', '--cleanenv', '-B', '/om2/scratch/Thu/nlo:/BASE:rw', '-B', '/rdma/vast-rdma/scratch/Thu/nlo/pydra-cache/abide/KKI/SingularityTask_b41b6387855fe83777cd5e154fc18a3dd2baa43204535925212ea6524c8add43:/output_pydra:rw', '--pwd', '/output_pydra', '/om4/group/gablab/data/singularity-images/fmriprep-20.2.0.sif'], ['singularity', 'exec', '--cleanenv', '-B', '/om2/scratch/Thu/nlo:/BASE:rw', '-B', '/rdma/vast-rdma/scratch/Thu/nlo/pydra-cache/abide/KKI/SingularityTask_111a8b2c0eb32119ed30fb5be3dbcd23bdfe5c5e53cf9c53089adab9599253e1:/output_pydra:rw', '--pwd', '/output_pydra', '/om4/group/gablab/data/singularity-images/fmriprep-20.2.0.sif']]
+
+sbatch_args:-J KKI -t 30:00:00 --mem=8GB --cpus-per-task=2 -p gablab
+Traceback (most recent call last):
+  File "/om2/scratch/Thu/nlo/scripts/pipeline/fmriprep-loop-task.py", line 81, in <module>
+    singu(submitter=sub)
+  File "/om2/user/nlo/miniconda/envs/pydra/lib/python3.7/site-packages/pydra/engine/core.py", line 424, in __call__
+    res = sub(self)
+  File "/om2/user/nlo/miniconda/envs/pydra/lib/python3.7/site-packages/pydra/engine/submitter.py", line 58, in __call__
+    self.loop.run_until_complete(self.submit(runnable, wait=True, rerun=rerun))
+  File "/om2/user/nlo/miniconda/envs/pydra/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/om2/user/nlo/miniconda/envs/pydra/lib/python3.7/site-packages/pydra/engine/submitter.py", line 132, in submit
+    await asyncio.gather(*futures)
+  File "/om2/user/nlo/miniconda/envs/pydra/lib/python3.7/site-packages/pydra/engine/workers.py", line 295, in _submit_job
+    done = await self._poll_job(jobid)
+  File "/om2/user/nlo/miniconda/envs/pydra/lib/python3.7/site-packages/pydra/engine/workers.py", line 320, in _poll_job
+    status = await self._verify_exit_code(jobid)
+  File "/om2/user/nlo/miniconda/envs/pydra/lib/python3.7/site-packages/pydra/engine/workers.py", line 345, in _verify_exit_code
+    raise Exception(error_message)
+Exception: RuntimeError: ('\x1b[33mWARNING:\x1b[0m seccomp requested but not enabled, seccomp library is missing or too old\n/usr/local/miniconda/lib/python3.7/site-packages/bids/layout/validation.py:46: UserWarning: The ability to pass arguments to BIDSLayout that control indexing is likely to be removed in future; possibly as early as PyBIDS 0.14. This includes the `config_filename`, `ignore`, `force_index`, and `index_metadata` arguments. The recommended usage pattern is to initialize a new BIDSLayoutIndexer with these arguments, and pass it to the BIDSLayout via the `indexer` argument.\n  warnings.warn("The ability to pass arguments to BIDSLayout that control "\nYou are using fMRIPrep-20.2.0, and a newer version of fMRIPrep is available: 20.2.1.\nPlease check out our documentation about how and when to upgrade:\nhttps://fmriprep.readthedocs.io/en/latest/faq.html#upgrading\n', ' full crash report is here: /rdma/vast-rdma/scratch/Thu/nlo/pydra-cache/abide/KKI/SingularityTask_b41b6387855fe83777cd5e154fc18a3dd2baa43204535925212ea6524c8add43/_error.pklz')

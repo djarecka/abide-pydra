@@ -9,7 +9,7 @@ import os
 
 #####################################################################
 DATASET = "abide"
-SITE = "MaxMun_c"
+SITE = "Leuven_2"
 
 BASE = "/om2/scratch/Thu/nlo"
 DATADIR = f"/BASE/{DATASET}/{SITE}"
@@ -26,7 +26,6 @@ if not os.path.exists(OUTDIR.replace("/BASE", BASE)):
 if not os.path.exists(CACHEDIR.replace("/BASE", BASE)):
     os.makedirs(CACHEDIR.replace("/BASE", BASE))
 
-# SUBJECT = ["sub-0050571","sub-0050572", "sub-0050573"]
 BIDSDIR = f"{BASE}/{DATASET}/{SITE}"
 SUBJECTS = [
     s
@@ -34,6 +33,8 @@ SUBJECTS = [
     if (s.startswith("sub-") and os.path.isdir(os.path.join(BIDSDIR, s)))
 ]
 #SUBJECTS= SUBJECTS[:2] # testing
+#SUBJECT = ["sub-0051334", "sub-0051348"]
+
 print(f"SUBJECTS = {SUBJECTS}")
 CMD_LIST = list()
 
@@ -50,6 +51,7 @@ for s in SUBJECTS:
     --output-space fsaverage6 --use-aroma \
     --skip-bids-validation --mem_mb 7500 \
     --fs-license-file /BASE/freesurfer_license.txt \
+    --fs-subjects-dir {OUTDIR}/freesurfer \
     --ignore slicetiming --cifti-output -w {SUBWORKDIR}".split()
     CMD_LIST.append(CMD)
 
@@ -76,7 +78,9 @@ print("SingularityTask container_args:")
 print(singu.container_args)
 print()
 
-SBATCH_ARGS = f"-J {SITE} -t 30:00:00 --mem=8GB --cpus-per-task=2 -p normal"
+#SBATCH_ARGS = f"-J {SITE} -t 30:00:00 --mem=8GB --cpus-per-task=2 -p gablab --mail-user=nlo@mit.edu --mail-type=ALL,TIME_LIMIT"
+#SBATCH_ARGS = f"-J {SITE} -t 36:00:00 --mem=8GB --cpus-per-task=2 -p normal --mail-user=nlo@mit.edu --mail-type=ALL,TIME_LIMIT"
+SBATCH_ARGS = f"-J {SITE} -t 36:00:00 --mem=8GB --cpus-per-task=2 -p gablab"
 print(f"sbatch_args:{SBATCH_ARGS}")
 
 with Submitter(plugin="slurm", sbatch_args=SBATCH_ARGS, max_jobs=400) as sub:

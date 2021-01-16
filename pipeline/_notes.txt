@@ -1,0 +1,22 @@
+Tasks submitted to SLURM won't run after they are preempted and requeued (or if they are
+cancelled manually and the same task is submitted again) because of pydra locks. 
+Tasks can continue to run after lock files are removed in pydra cache
+
+Which means:
+- for tasks that take days to run, sub
+
+--------------
+Another reason why tasks might not be running is if a task is cancelled or requeued when
+ freesurfer is running (aka. 'IsRunning' files are still there)
+
+E.g. if this file exists when a task is preempted and requeued
+/om2/scratch/Thu/nlo/abide/USM/derivatives/freesurfer/sub-0050432/scripts/IsRunning.rh
+
+recon-all for right hemisphere will not finish running  
+which means the *derivatives/freesurfer/scripts/recon-all-status-rh.log file will not have a "finished without error" in the end 
+
+Last line of recon-all-status*.log file if something finished running
+recon-all -s sub-0050432 finished without error at Tue Dec 22 16:33:45 EST 2020
+
+
+

@@ -1,0 +1,16 @@
+A newer version (0.12.1) of nipype/pydra is available. You are using 0.12+17.gd5d6236
+Pydra version:  0.12+17.gd5d6236
+python -u /om2/scratch/Thu/nlo/scripts/pipeline/fmriprep-loop-task.py
+SUBJECTS = ['sub-0051328', 'sub-0051332']
+Sample command:
+['fmriprep', '/BASE/abide/MaxMun_c', '/BASE/abide/MaxMun_c/derivatives', 'participant', '--participant_label', 'sub-0051328', '--nprocs', '2', '--output-space', 'fsaverage6', '--use-aroma', '--skip-bids-validation', '--mem_mb', '7500', '--fs-license-file', '/BASE/freesurfer_license.txt', '--fs-subjects-dir', '/BASE/abide/MaxMun_c/derivatives/freesurfer', '--ignore', 'slicetiming', '--cifti-output', '-w', '/BASE/fmriprep-workdir/abide/MaxMun_c/sub-0051328']
+A newer version (0.12.1) of nipype/pydra is available. You are using 0.12+17.gd5d6236
+
+SingularityTask inputs:
+Inputs(executable=[['fmriprep', '/BASE/abide/MaxMun_c', '/BASE/abide/MaxMun_c/derivatives', 'participant', '--participant_label', 'sub-0051328', '--nprocs', '2', '--output-space', 'fsaverage6', '--use-aroma', '--skip-bids-validation', '--mem_mb', '7500', '--fs-license-file', '/BASE/freesurfer_license.txt', '--fs-subjects-dir', '/BASE/abide/MaxMun_c/derivatives/freesurfer', '--ignore', 'slicetiming', '--cifti-output', '-w', '/BASE/fmriprep-workdir/abide/MaxMun_c/sub-0051328'], ['fmriprep', '/BASE/abide/MaxMun_c', '/BASE/abide/MaxMun_c/derivatives', 'participant', '--participant_label', 'sub-0051332', '--nprocs', '2', '--output-space', 'fsaverage6', '--use-aroma', '--skip-bids-validation', '--mem_mb', '7500', '--fs-license-file', '/BASE/freesurfer_license.txt', '--fs-subjects-dir', '/BASE/abide/MaxMun_c/derivatives/freesurfer', '--ignore', 'slicetiming', '--cifti-output', '-w', '/BASE/fmriprep-workdir/abide/MaxMun_c/sub-0051332']], args=None, image='/om4/group/gablab/data/singularity-images/fmriprep-20.2.0.sif', container_xargs=['--cleanenv'], bindings=[('/om2/scratch/Thu/nlo', '/BASE', 'rw')], container='singularity')
+
+SingularityTask container_args:
+[['singularity', 'exec', '--cleanenv', '-B', '/om2/scratch/Thu/nlo:/BASE:rw', '-B', '/rdma/vast-rdma/scratch/Thu/nlo/pydra-cache/abide/MaxMun_c/SingularityTask_6ffec1969ea39c3e28cf37edd061198b4c9b4b415d4f8a03ab770049733ff809:/output_pydra:rw', '--pwd', '/output_pydra', '/om4/group/gablab/data/singularity-images/fmriprep-20.2.0.sif'], ['singularity', 'exec', '--cleanenv', '-B', '/om2/scratch/Thu/nlo:/BASE:rw', '-B', '/rdma/vast-rdma/scratch/Thu/nlo/pydra-cache/abide/MaxMun_c/SingularityTask_f8b1b67274ec6bf8f3a1ed6a06b9d2863279226cdb64bc4a65f2a03cec51906d:/output_pydra:rw', '--pwd', '/output_pydra', '/om4/group/gablab/data/singularity-images/fmriprep-20.2.0.sif']]
+
+sbatch_args:-J MaxMun_c -t 30:00:00 --mem=8GB --cpus-per-task=2 -p normal
+slurmstepd: error: *** JOB 18838009 ON node012 CANCELLED AT 2020-12-21T10:23:09 DUE TO TIME LIMIT ***

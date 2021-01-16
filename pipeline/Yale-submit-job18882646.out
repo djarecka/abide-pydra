@@ -1,0 +1,16 @@
+A newer version (0.12.1) of nipype/pydra is available. You are using 0.12+17.gd5d6236
+Pydra version:  0.12+17.gd5d6236
+python -u /om2/scratch/Thu/nlo/scripts/pipeline/fmriprep-loop-task.py
+SUBJECTS = ['sub-0050551', 'sub-0050552']
+Sample command:
+['fmriprep', '/BASE/abide/Yale', '/BASE/abide/Yale/derivatives', 'participant', '--participant_label', 'sub-0050551', '--nprocs', '2', '--output-space', 'fsaverage6', '--use-aroma', '--skip-bids-validation', '--mem_mb', '7500', '--fs-license-file', '/BASE/freesurfer_license.txt', '--fs-subjects-dir', '/BASE/abide/Yale/derivatives/freesurfer', '--ignore', 'slicetiming', '--cifti-output', '-w', '/BASE/fmriprep-workdir/abide/Yale/sub-0050551']
+A newer version (0.12.1) of nipype/pydra is available. You are using 0.12+17.gd5d6236
+
+SingularityTask inputs:
+Inputs(executable=[['fmriprep', '/BASE/abide/Yale', '/BASE/abide/Yale/derivatives', 'participant', '--participant_label', 'sub-0050551', '--nprocs', '2', '--output-space', 'fsaverage6', '--use-aroma', '--skip-bids-validation', '--mem_mb', '7500', '--fs-license-file', '/BASE/freesurfer_license.txt', '--fs-subjects-dir', '/BASE/abide/Yale/derivatives/freesurfer', '--ignore', 'slicetiming', '--cifti-output', '-w', '/BASE/fmriprep-workdir/abide/Yale/sub-0050551'], ['fmriprep', '/BASE/abide/Yale', '/BASE/abide/Yale/derivatives', 'participant', '--participant_label', 'sub-0050552', '--nprocs', '2', '--output-space', 'fsaverage6', '--use-aroma', '--skip-bids-validation', '--mem_mb', '7500', '--fs-license-file', '/BASE/freesurfer_license.txt', '--fs-subjects-dir', '/BASE/abide/Yale/derivatives/freesurfer', '--ignore', 'slicetiming', '--cifti-output', '-w', '/BASE/fmriprep-workdir/abide/Yale/sub-0050552']], args=None, image='/om4/group/gablab/data/singularity-images/fmriprep-20.2.0.sif', container_xargs=['--cleanenv'], bindings=[('/om2/scratch/Thu/nlo', '/BASE', 'rw')], container='singularity')
+
+SingularityTask container_args:
+[['singularity', 'exec', '--cleanenv', '-B', '/om2/scratch/Thu/nlo:/BASE:rw', '-B', '/rdma/vast-rdma/scratch/Thu/nlo/pydra-cache/abide/Yale/SingularityTask_3328e39d68c520e0507e89cfc81f7759ed19abaadddd31dcca766f816e2aaa9b:/output_pydra:rw', '--pwd', '/output_pydra', '/om4/group/gablab/data/singularity-images/fmriprep-20.2.0.sif'], ['singularity', 'exec', '--cleanenv', '-B', '/om2/scratch/Thu/nlo:/BASE:rw', '-B', '/rdma/vast-rdma/scratch/Thu/nlo/pydra-cache/abide/Yale/SingularityTask_4f4852fca63feb233a485d6ceb8e681f48155fab009267551154ee0ca3d4a493:/output_pydra:rw', '--pwd', '/output_pydra', '/om4/group/gablab/data/singularity-images/fmriprep-20.2.0.sif']]
+
+sbatch_args:-J Yale -t 30:00:00 --mem=8GB --cpus-per-task=2 -p normal
+slurmstepd: error: *** JOB 18882646 ON dgx001 CANCELLED AT 2020-12-22T04:27:00 ***

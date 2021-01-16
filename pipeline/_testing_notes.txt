@@ -1,0 +1,96 @@
+-----------
+useful commands
+
+check IsRunning files
+ls -lt /om2/scratch/Thu/nlo/abide*/*/derivatives/freesurfer/sub-*/scripts/IsRunning*
+
+
+-----
+Testing
+Is freesurfer IsRunning files the bottle neck or are pydra lock files bottle necks?
+
+MaxMun_d - while requeued jobs are running, delete pydra locks 
+SDSU - delete pydra cache locks before submitting old job (sub-0050182, 192, 197)
+
+
+MaxMun_c - delete pydra cache locks and IsRunning files before submitting old job (sub-0051334 and sub-0051348)
+
+abide2/GU_1 
+- test1:  while requeued jobs are running, delete IsRunning files.  None of the IsRunning files are regenerated like in IU_1
+- test2: after test1, delete lock files.  IsRunning files reappeared again
+
+
+
+abide2/IU_1 
+- partition normal, some jobs are prempted. Some jobs finished running but every singularity task still has a lock filem and
+there aren't any fmriprep html files.
+- test;  while some requeued jobs are still running, delete IsRunning files then pydra locks 
+
+These locks reappeared after being deleted (still running)
+om2/scratch/Thu/nlo/pydra-cache/abide2/IU_1/SingularityTask_0cdda1fd2bcd90bc2a005abb8eb8016cbcf33c985a265c9ee4f452825d879421.lock
+/om2/scratch/Thu/nlo/pydra-cache/abide2/IU_1/SingularityTask_1621e5f74be09ed7644b1d1b5823a2c9ed900662dc12ed700a14f7e1c98f03ff.lock
+/om2/scratch/Thu/nlo/pydra-cache/abide2/IU_1/SingularityTask_4957abb1029433e8546ef8f59be9416a93e6ded4ea89858c8543ae559a1f62bb.lock
+/om2/scratch/Thu/nlo/pydra-cache/abide2/IU_1/SingularityTask_7856c07bc6d40994bccf700c334096419d4c6430a7f806d56d36515c2330d117.lock
+/om2/scratch/Thu/nlo/pydra-cache/abide2/IU_1/SingularityTask_89dd398095747cd31519f0fceb190aee3d0efd2ebdabe94263cfd373c807e83e.lock
+/om2/scratch/Thu/nlo/pydra-cache/abide2/IU_1/SingularityTask_98a4b703f4365099c0d3a779135f1f199477652d9978e80b8e72f7a77d9b103d.lock
+/om2/scratch/Thu/nlo/pydra-cache/abide2/IU_1/SingularityTask_bd7c14a379a6d79b39d6df1f217f21fd7488ac0121ac289262698b6f6eee08a5.lock
+/om2/scratch/Thu/nlo/pydra-cache/abide2/IU_1/SingularityTask_c178e61008633dcd3d144d0d9ec8f33ddb7949974f083f930e75bee7fc79cfe6.lock
+/om2/scratch/Thu/nlo/pydra-cache/abide2/IU_1/SingularityTask_f8fa2354bebeacde1379341a4cb98a672ce318db0921e87e871be18f689a59b5.lock
+
+These files reappeared after being deleted
+-rw-rw-r-- 1 nlo root 348 Dec 28 05:38 /om2/scratch/Thu/nlo/abide2/IU_1/derivatives/freesurfer/sub-29539/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 350 Dec 28 05:38 /om2/scratch/Thu/nlo/abide2/IU_1/derivatives/freesurfer/sub-29542/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 348 Dec 28 05:38 /om2/scratch/Thu/nlo/abide2/IU_1/derivatives/freesurfer/sub-29544/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 350 Dec 28 05:38 /om2/scratch/Thu/nlo/abide2/IU_1/derivatives/freesurfer/sub-29552/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 349 Dec 28 05:38 /om2/scratch/Thu/nlo/abide2/IU_1/derivatives/freesurfer/sub-29554/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 349 Dec 28 05:38 /om2/scratch/Thu/nlo/abide2/IU_1/derivatives/freesurfer/sub-29555/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 349 Dec 28 05:38 /om2/scratch/Thu/nlo/abide2/IU_1/derivatives/freesurfer/sub-29568/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 348 Dec 28 05:38 /om2/scratch/Thu/nlo/abide2/IU_1/derivatives/freesurfer/sub-29569/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 348 Dec 28 05:38 /om2/scratch/Thu/nlo/abide2/IU_1/derivatives/freesurfer/sub-29571/scripts/IsRunning.lh+rh
+
+
+
+
+
+
+
+
+-rw-rw-r-- 1 nlo root 329 Dec 13 11:02 /om2/scratch/Thu/nlo/abide/Caltech/derivatives/freesurfer/sub-0051466/scripts/IsRunning.lh
+-rw-rw-r-- 1 nlo root 349 Dec 21 19:21 /om2/scratch/Thu/nlo/abide/MaxMun_c/derivatives/freesurfer/sub-0051334/scripts/IsRunning.rh
+-rw-rw-r-- 1 nlo root 352 Dec 21 20:59 /om2/scratch/Thu/nlo/abide/MaxMun_c/derivatives/freesurfer/sub-0051348/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 352 Dec 27 01:56 /om2/scratch/Thu/nlo/abide/MaxMun_d/derivatives/freesurfer/sub-0051329/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 352 Dec 27 01:56 /om2/scratch/Thu/nlo/abide/MaxMun_d/derivatives/freesurfer/sub-0051330/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 351 Dec 27 01:56 /om2/scratch/Thu/nlo/abide/MaxMun_d/derivatives/freesurfer/sub-0051331/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 330 Dec 27 01:56 /om2/scratch/Thu/nlo/abide/MaxMun_d/derivatives/freesurfer/sub-0051349/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 351 Dec 27 01:56 /om2/scratch/Thu/nlo/abide/MaxMun_d/derivatives/freesurfer/sub-0051351/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 330 Dec 27 01:56 /om2/scratch/Thu/nlo/abide/MaxMun_d/derivatives/freesurfer/sub-0051352/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 352 Dec 27 01:56 /om2/scratch/Thu/nlo/abide/MaxMun_d/derivatives/freesurfer/sub-0051353/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 352 Dec 27 01:56 /om2/scratch/Thu/nlo/abide/MaxMun_d/derivatives/freesurfer/sub-0051354/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 352 Dec 27 01:56 /om2/scratch/Thu/nlo/abide/MaxMun_d/derivatives/freesurfer/sub-0051356/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 351 Dec 27 01:56 /om2/scratch/Thu/nlo/abide/MaxMun_d/derivatives/freesurfer/sub-0051357/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 330 Dec 27 01:56 /om2/scratch/Thu/nlo/abide/MaxMun_d/derivatives/freesurfer/sub-0051359/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 351 Dec 27 01:56 /om2/scratch/Thu/nlo/abide/MaxMun_d/derivatives/freesurfer/sub-0051360/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 349 Dec 20 13:49 /om2/scratch/Thu/nlo/abide/SDSU/derivatives/freesurfer/sub-0050182/scripts/IsRunning.lh
+-rw-rw-r-- 1 nlo root 348 Dec 20 12:49 /om2/scratch/Thu/nlo/abide/SDSU/derivatives/freesurfer/sub-0050192/scripts/IsRunning.lh
+-rw-rw-r-- 1 nlo root 349 Dec 20 22:01 /om2/scratch/Thu/nlo/abide/SDSU/derivatives/freesurfer/sub-0050197/scripts/IsRunning.rh
+-rw-rw-r-- 1 nlo root 352 Dec 21 14:59 /om2/scratch/Thu/nlo/abide/UCLA_2/derivatives/freesurfer/sub-0051292/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 349 Dec 23 03:17 /om2/scratch/Thu/nlo/abide/UCLA_2/derivatives/freesurfer/sub-0051295/scripts/IsRunning.lh
+-rw-rw-r-- 1 nlo root 348 Dec 21 18:28 /om2/scratch/Thu/nlo/abide/UCLA_2/derivatives/freesurfer/sub-0051296/scripts/IsRunning.lh
+-rw-rw-r-- 1 nlo root 352 Dec 21 14:59 /om2/scratch/Thu/nlo/abide/UCLA_2/derivatives/freesurfer/sub-0051297/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 352 Dec 21 14:57 /om2/scratch/Thu/nlo/abide/UCLA_2/derivatives/freesurfer/sub-0051299/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 352 Dec 23 02:20 /om2/scratch/Thu/nlo/abide/UCLA_2/derivatives/freesurfer/sub-0051300/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 348 Dec 23 03:18 /om2/scratch/Thu/nlo/abide/UCLA_2/derivatives/freesurfer/sub-0051307/scripts/IsRunning.lh
+-rw-rw-r-- 1 nlo root 352 Dec 21 14:58 /om2/scratch/Thu/nlo/abide/UCLA_2/derivatives/freesurfer/sub-0051308/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 352 Dec 23 02:20 /om2/scratch/Thu/nlo/abide/UCLA_2/derivatives/freesurfer/sub-0051309/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 352 Dec 21 14:58 /om2/scratch/Thu/nlo/abide/UCLA_2/derivatives/freesurfer/sub-0051311/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 352 Dec 21 14:58 /om2/scratch/Thu/nlo/abide/UCLA_2/derivatives/freesurfer/sub-0051312/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 352 Dec 21 14:59 /om2/scratch/Thu/nlo/abide/UCLA_2/derivatives/freesurfer/sub-0051313/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 352 Dec 23 02:20 /om2/scratch/Thu/nlo/abide/UCLA_2/derivatives/freesurfer/sub-0051314/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 349 Dec 21 22:01 /om2/scratch/Thu/nlo/abide/UM_1/derivatives/freesurfer/sub-0050279/scripts/IsRunning.lh
+-rw-rw-r-- 1 nlo root 330 Dec 21 22:04 /om2/scratch/Thu/nlo/abide/UM_1/derivatives/freesurfer/sub-0050307/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 332 Dec 21 21:38 /om2/scratch/Thu/nlo/abide/UM_1/derivatives/freesurfer/sub-0050335/scripts/IsRunning.lh+rh
+-rw-rw-r-- 1 nlo root 349 Dec 22 00:48 /om2/scratch/Thu/nlo/abide/UM_2/derivatives/freesurfer/sub-0050417/scripts/IsRunning.rh
+-rw-rw-r-- 1 nlo root 349 Dec 21 19:53 /om2/scratch/Thu/nlo/abide/UM_2/derivatives/freesurfer/sub-0050418/scripts/IsRunning.lh
+-rw-rw-r-- 1 nlo root 349 Dec 21 19:33 /om2/scratch/Thu/nlo/abide/UM_2/derivatives/freesurfer/sub-0050422/scripts/IsRunning.lh
+-rw-rw-r-- 1 nlo root 327 Dec 22 17:38 /om2/scratch/Thu/nlo/abide/USM/derivatives/freesurfer/sub-0050432/scripts/IsRunning.rh
+-rw-rw-r-- 1 nlo root 329 Dec 23 05:08 /om2/scratch/Thu/nlo/abide/Yale/derivatives/freesurfer/sub-0050552/scripts/IsRunning.lh+rh

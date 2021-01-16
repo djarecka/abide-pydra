@@ -1,0 +1,19 @@
+A newer version (0.12.1) of nipype/pydra is available. You are using 0.12+17.gd5d6236
+Pydra version:  0.12+17.gd5d6236
+python -u /om2/scratch/Thu/nlo/scripts/pipeline/fmriprep-no-context-manager.py
+SUBJECTS = ['sub-29006', 'sub-29007']
+Sample command:
+['fmriprep', '/BASE/abide2/BNI_1', '/BASE/abide2/BNI_1/derivatives', 'participant', '--participant_label', 'sub-29006', '--nprocs', '2', '--output-space', 'fsaverage6', '--use-aroma', '--skip-bids-validation', '--mem_mb', '7500', '--fs-license-file', '/BASE/freesurfer_license.txt', '--fs-subjects-dir', '/BASE/abide2/BNI_1/derivatives/freesurfer', '--ignore', 'slicetiming', '--cifti-output', '-w', '/BASE/fmriprep-workdir/abide2/BNI_1/sub-29006']
+A newer version (0.12.1) of nipype/pydra is available. You are using 0.12+17.gd5d6236
+
+SingularityTask inputs:
+Inputs(executable=[['fmriprep', '/BASE/abide2/BNI_1', '/BASE/abide2/BNI_1/derivatives', 'participant', '--participant_label', 'sub-29006', '--nprocs', '2', '--output-space', 'fsaverage6', '--use-aroma', '--skip-bids-validation', '--mem_mb', '7500', '--fs-license-file', '/BASE/freesurfer_license.txt', '--fs-subjects-dir', '/BASE/abide2/BNI_1/derivatives/freesurfer', '--ignore', 'slicetiming', '--cifti-output', '-w', '/BASE/fmriprep-workdir/abide2/BNI_1/sub-29006'], ['fmriprep', '/BASE/abide2/BNI_1', '/BASE/abide2/BNI_1/derivatives', 'participant', '--participant_label', 'sub-29007', '--nprocs', '2', '--output-space', 'fsaverage6', '--use-aroma', '--skip-bids-validation', '--mem_mb', '7500', '--fs-license-file', '/BASE/freesurfer_license.txt', '--fs-subjects-dir', '/BASE/abide2/BNI_1/derivatives/freesurfer', '--ignore', 'slicetiming', '--cifti-output', '-w', '/BASE/fmriprep-workdir/abide2/BNI_1/sub-29007']], args=None, image='/om4/group/gablab/data/singularity-images/fmriprep-20.2.0.sif', container_xargs=['--cleanenv'], bindings=[('/om2/scratch/Thu/nlo', '/BASE', 'rw')], container='singularity')
+
+SingularityTask container_args:
+[['singularity', 'exec', '--cleanenv', '-B', '/om2/scratch/Thu/nlo:/BASE:rw', '-B', '/rdma/vast-rdma/scratch/Thu/nlo/pydra-cache/abide2/BNI_1/SingularityTask_8b6944f7de8963e7f84d6d5ce324720d34d470f1582ee52354ea941a020f8256:/output_pydra:rw', '--pwd', '/output_pydra', '/om4/group/gablab/data/singularity-images/fmriprep-20.2.0.sif'], ['singularity', 'exec', '--cleanenv', '-B', '/om2/scratch/Thu/nlo:/BASE:rw', '-B', '/rdma/vast-rdma/scratch/Thu/nlo/pydra-cache/abide2/BNI_1/SingularityTask_8a4806601c6693a5c8f4c3bc37d6cea20bbc751bc0439bdabac4e086b7d466e3:/output_pydra:rw', '--pwd', '/output_pydra', '/om4/group/gablab/data/singularity-images/fmriprep-20.2.0.sif']]
+
+sbatch_args:-J BNI_1 -t 30:00:00 --mem=8GB --cpus-per-task=2 -p normal
+SUBMITTER FORMAT - NO CONTEXT MANAGER
+sub = Submitter(plugin='slurm', sbatch_args=SBATCH_ARGS, max_jobs=400)
+task(submitter=sub)
+Done running!

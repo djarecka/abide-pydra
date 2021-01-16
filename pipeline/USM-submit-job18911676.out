@@ -1,0 +1,39 @@
+A newer version (0.12.1) of nipype/pydra is available. You are using 0.12+17.gd5d6236
+Pydra version:  0.12+17.gd5d6236
+python -u /om2/scratch/Thu/nlo/scripts/pipeline/fmriprep-loop-task.py
+SUBJECTS = ['sub-51209', 'sub-51215']
+Sample command:
+['fmriprep', '/BASE/abide2/UCLA_Long', '/BASE/abide2/UCLA_Long/derivatives', 'participant', '--participant_label', 'sub-51209', '--nprocs', '2', '--output-space', 'fsaverage6', '--use-aroma', '--skip-bids-validation', '--mem_mb', '7500', '--fs-license-file', '/BASE/freesurfer_license.txt', '--fs-subjects-dir', '/BASE/abide2/UCLA_Long/derivatives/freesurfer', '--ignore', 'slicetiming', '--cifti-output', '-w', '/BASE/fmriprep-workdir/abide2/UCLA_Long/sub-51209']
+A newer version (0.12.1) of nipype/pydra is available. You are using 0.12+17.gd5d6236
+
+SingularityTask inputs:
+Inputs(executable=[['fmriprep', '/BASE/abide2/UCLA_Long', '/BASE/abide2/UCLA_Long/derivatives', 'participant', '--participant_label', 'sub-51209', '--nprocs', '2', '--output-space', 'fsaverage6', '--use-aroma', '--skip-bids-validation', '--mem_mb', '7500', '--fs-license-file', '/BASE/freesurfer_license.txt', '--fs-subjects-dir', '/BASE/abide2/UCLA_Long/derivatives/freesurfer', '--ignore', 'slicetiming', '--cifti-output', '-w', '/BASE/fmriprep-workdir/abide2/UCLA_Long/sub-51209'], ['fmriprep', '/BASE/abide2/UCLA_Long', '/BASE/abide2/UCLA_Long/derivatives', 'participant', '--participant_label', 'sub-51215', '--nprocs', '2', '--output-space', 'fsaverage6', '--use-aroma', '--skip-bids-validation', '--mem_mb', '7500', '--fs-license-file', '/BASE/freesurfer_license.txt', '--fs-subjects-dir', '/BASE/abide2/UCLA_Long/derivatives/freesurfer', '--ignore', 'slicetiming', '--cifti-output', '-w', '/BASE/fmriprep-workdir/abide2/UCLA_Long/sub-51215']], args=None, image='/om4/group/gablab/data/singularity-images/fmriprep-20.2.0.sif', container_xargs=['--cleanenv'], bindings=[('/om2/scratch/Thu/nlo', '/BASE', 'rw')], container='singularity')
+
+SingularityTask container_args:
+[['singularity', 'exec', '--cleanenv', '-B', '/om2/scratch/Thu/nlo:/BASE:rw', '-B', '/rdma/vast-rdma/scratch/Thu/nlo/pydra-cache/abide2/UCLA_Long/SingularityTask_07b17186e2516cc9d1eac0ae5914a48f658125811b6ac40af9635d101de67d2c:/output_pydra:rw', '--pwd', '/output_pydra', '/om4/group/gablab/data/singularity-images/fmriprep-20.2.0.sif'], ['singularity', 'exec', '--cleanenv', '-B', '/om2/scratch/Thu/nlo:/BASE:rw', '-B', '/rdma/vast-rdma/scratch/Thu/nlo/pydra-cache/abide2/UCLA_Long/SingularityTask_eec9077c7566dbc719b1134cf94c8e3db05f348d1e1afd3988b3b583bc64dbcc:/output_pydra:rw', '--pwd', '/output_pydra', '/om4/group/gablab/data/singularity-images/fmriprep-20.2.0.sif']]
+
+sbatch_args:-J UCLA_Long -t 30:00:00 --mem=8GB --cpus-per-task=2 -p gablab
+Traceback (most recent call last):
+  File "/om2/scratch/Thu/nlo/scripts/pipeline/fmriprep-loop-task.py", line 84, in <module>
+    singu(submitter=sub)
+  File "/om2/user/nlo/miniconda/envs/pydra/lib/python3.7/site-packages/pydra/engine/core.py", line 424, in __call__
+    res = sub(self)
+  File "/om2/user/nlo/miniconda/envs/pydra/lib/python3.7/site-packages/pydra/engine/submitter.py", line 58, in __call__
+    self.loop.run_until_complete(self.submit(runnable, wait=True, rerun=rerun))
+  File "/om2/user/nlo/miniconda/envs/pydra/lib/python3.7/asyncio/base_events.py", line 587, in run_until_complete
+    return future.result()
+  File "/om2/user/nlo/miniconda/envs/pydra/lib/python3.7/site-packages/pydra/engine/submitter.py", line 132, in submit
+    await asyncio.gather(*futures)
+  File "/om2/user/nlo/miniconda/envs/pydra/lib/python3.7/site-packages/pydra/engine/workers.py", line 295, in _submit_job
+    done = await self._poll_job(jobid)
+  File "/om2/user/nlo/miniconda/envs/pydra/lib/python3.7/site-packages/pydra/engine/workers.py", line 320, in _poll_job
+    status = await self._verify_exit_code(jobid)
+  File "/om2/user/nlo/miniconda/envs/pydra/lib/python3.7/site-packages/pydra/engine/workers.py", line 338, in _verify_exit_code
+    error_line = Path(error_file).read_text().split("\n")[-2]
+  File "/om2/user/nlo/miniconda/envs/pydra/lib/python3.7/pathlib.py", line 1216, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+  File "/om2/user/nlo/miniconda/envs/pydra/lib/python3.7/pathlib.py", line 1203, in open
+    opener=self._opener)
+  File "/om2/user/nlo/miniconda/envs/pydra/lib/python3.7/pathlib.py", line 1058, in _opener
+    return self._accessor.open(self, flags, mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/rdma/vast-rdma/scratch/Thu/nlo/pydra-cache/abide2/UCLA_Long/SlurmWorker_scripts/af2d792e85134331963740541fabd270_1/slurm-18911682.err'
